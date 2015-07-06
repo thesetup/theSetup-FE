@@ -3,9 +3,9 @@
   'use strict';
 
 
-  angular.module('UserServiceModule', [])
+  angular.module('User')
 
-  .service('UserService', ['$http', function ($http) {
+  .service('UserService', ['$rootScope','$http', function ($rootScope,$http) {
 
     this.userLogIn = function () {
 

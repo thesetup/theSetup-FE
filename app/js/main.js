@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('app', ['ui.router', 'ngCookies', 'ngMaterial', 'UserServiceModule'])
+  angular.module('app', ['ui.router', 'ngCookies', 'User', 'Profile', 'Application'])
 
   .config(['$stateProvider', '$urlRouterProvider',
 
@@ -25,23 +25,56 @@
 
         .state('home.loggedin', {
           url: '',
-          templateUrl: 'js/templates/homeloggedin.tpl.html',
-          controller: 'DashboardController'
+          views: {
+            'header' : {
+              templateUrl: 'js/templates/homeloggedin.tpl.html',
+              controller: 'UserController'
+            },
+            'dashboardView': {
+              templateUrl: 'js/templates/dashboard.tpl.html',
+              controller: 'DashboardController'
+            },
+            'searchView' : {
+              templateUrl: 'js/templates/search.tpl.html',
+              controller: 'SearchController'
+            },
+             'newsView' : {
+              templateUrl: 'js/templates/news.tpl.html',
+              controller: 'PublicController'
+             }
+
+          }
         })
         .state('home.public', {
           url: '',
-          templateUrl: 'js/templates/homenotloggedin.tpl.html',
-          controller: 'PublicController'
-        })
-        .state('about', {
-          url: '/about',
-          templateUrl: 'js/templates/about.tpl.html',
-          controller: 'PublicController'
+          views: {
+            'header' : {
+              templateUrl: 'js/templates/homenotloggedin.tpl.html',
+              controller: 'UserController'
+            },
+            'aboutView' : {
+              templateUrl: 'js/templates/about.tpl.html',
+              controller: 'PublicController'
+            },
+            'loginView' : {
+              templateUrl: 'js/templates/login.tpl.html',
+              controller: 'UserController'
+            },
+            'newsView' : {
+              templateUrl: 'js/templates/news.tpl.html',
+              controller: 'PublicController'
+            }
+          }
         })
         .state('login', {
           url: '/login',
           templateUrl: 'js/templates/login.tpl.html',
           controller: 'UserController'
+        })
+        .state('search', {
+          url: '/search',
+          templateUrl: 'js/templates/search.tpl.html',
+          controller: 'SearchController'
         });
 
 

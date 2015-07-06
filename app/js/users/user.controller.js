@@ -2,9 +2,9 @@
 
   'use strict';
 
-  angular.module('UserServiceModule')
+  angular.module('User')
 
-  .controller('UserController', ['$scope', function ($scope) {
+  .controller('UserController', ['$scope', 'UserService', function ($scope, UserService) {
 
 
   }]);
