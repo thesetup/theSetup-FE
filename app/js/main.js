@@ -90,8 +90,6 @@
         })
         .state('createprofile.create', {
           url: '',
-
-
           views: {
             'questions' : {
               templateUrl: 'js/templates/profilequestions.tpl.html',

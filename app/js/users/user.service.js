@@ -16,7 +16,7 @@
 
     };
 
-    this.checkLogin = true;
+    this.checkLogin = false;
 
   }]);
 
