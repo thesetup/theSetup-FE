@@ -75,7 +75,43 @@
           url: '/search',
           templateUrl: 'js/templates/search.tpl.html',
           controller: 'SearchController'
+        })
+        .state('searchresults', {
+          url: '/search/results',
+          templateUrl: 'js/templates/searchresults.tpl.html',
+          controller: 'SearchController'
+        })
+        .state('createprofile', {
+          url: '/create',
+          templateUrl: 'js/templates/create.tpl.html',
+          controller: function ($scope, $state, ProfileService) {
+            $state.go('createprofile.create');
+          }
+        })
+        .state('createprofile.create', {
+          url: '',
+
+
+          views: {
+            'questions' : {
+              templateUrl: 'js/templates/profilequestions.tpl.html',
+              controller: 'QuestionController'
+            },
+            'pictures' : {
+              templateUrl: 'js/templates/pictures.tpl.html',
+              controller: 'PicturesController'
+            },
+            'video' : {
+              templateUrl: 'js/templates/video.tpl.html',
+              controller: 'VideoController'
+            },
+            'review' : {
+              templateUrl: 'js/templates/review.tpl.html',
+              controller: 'ProfileController'
+            }
+          }
         });
+
 
 
     }
