@@ -55,24 +55,21 @@
 
 
     this.checkStatus = function () {
-      console.log('in checkStatus');
       var user = $cookies.get('access_token') !== undefined;
       if(user) {
-        console.log('in if statement');
         $state.go('home');
       }
     };
 
     this.isLoggedIn = function () {
       var user = $cookies.get('access_token');
-      console.log('in isLoggedIn function!!!');
       return (user !== undefined) ? true : false;
     };
 
     this.checkLogin = function () {
       var user = $cookies.get('access_token') !== undefined;
-      if (user !== true) {
-        $state.go('home');
+      if (!user && !$state.includes('login')) {
+      $state.go('home');
       }
     };
 

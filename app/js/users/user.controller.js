@@ -24,6 +24,10 @@
       $state.go('login');
     };
 
+    $scope.createButton = function () {
+      $state.go('createprofile');
+    };
+
   }]);
 
 }());
