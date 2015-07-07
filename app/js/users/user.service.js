@@ -15,20 +15,28 @@
 
     var _updateConfig = function (user) {
       API.CONFIG.headers['Access-Token'] = user.access_token;
-      $state.go('home.loggedin');
+      $state.go('home');
     };
 
 
     var _successLog = function (data) {
       $cookies.put('access_token', data.access_token);
       $cookies.putObject('currentUser', data);
-      $location.path('/');
+      _updateConfig(data);
+      $state.go('home');
       };
+
+    var _successLogout = function () {
+      $cookies.remove('access_token');
+      $cookies.remove('currentUser');
+      API.CONFIG.headers['Access-Token'] = '';
+      $state.reload();
+    };
 
     this.userLogIn = function (user) {
       $http({
         method: 'POST',
-        url: API.URL + '/login',
+        url: API.URL + '/users/login',
         headers: API.CONFIG.headers,
         params: user
       }).success( function (data) {
@@ -47,13 +55,29 @@
 
 
     this.checkStatus = function () {
-      var user = $cookies.get('access_token');
-      console.log(user);
-      if(user !== undefined) {
-        _updateConfig(user);
-      } else {
-        $state.go('home.public');
+      console.log('in checkStatus');
+      var user = $cookies.get('access_token') !== undefined;
+      if(user) {
+        console.log('in if statement');
+        $state.go('home');
       }
+    };
+
+    this.isLoggedIn = function () {
+      var user = $cookies.get('access_token');
+      console.log('in isLoggedIn function!!!');
+      return (user !== undefined) ? true : false;
+    };
+
+    this.checkLogin = function () {
+      var user = $cookies.get('access_token') !== undefined;
+      if (user !== true) {
+        $state.go('home');
+      }
+    };
+
+    this.logout = function () {
+      _successLogout();
     };
 
 

@@ -12,9 +12,17 @@
     };
 
     $scope.loginUser = function (user) {
-      UserService.userLogin(user);
+      UserService.userLogIn(user);
     };
 
+    $scope.logoutUser = function () {
+      UserService.logout();
+    };
+
+    $scope.gotoLogin = function () {
+
+      $state.go('login');
+    };
 
   }]);
 

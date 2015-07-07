@@ -24,7 +24,9 @@
           url: '/',
           templateUrl: 'js/templates/home.tpl.html',
           controller: function ($scope, $state, UserService) {
-            if(UserService.checkStatus()){
+            console.log('in home state controller');
+            if(UserService.isLoggedIn()){
+              console.log('heyo!');
               $state.go('home.loggedin');
             }else{
               $state.go('home.public');
@@ -117,19 +119,33 @@
               controller: 'ProfileController'
             }
           }
+        })
+        .state('singleprofile', {
+          url: 'single',
+          templateUrl: 'js/templates/singleprofile.tpl.html',
+          controller: 'ProfileController'
         });
 
     }
 
   ])
 
-.run(['$rootScope', 'UserService', function ($rootScope, UserService) {
+  .run(['$rootScope', 'UserService', '$state', '$cookies', function ($rootScope, UserService, $state, $cookies) {
+
 
     $rootScope.$on('$stateChangeSuccess', function () {
-      UserService.checkStatus();
+
+      if($state.includes('home')){
+        console.log('in run function');
+           UserService.checkStatus();
+         } else {
+           UserService.checkLogin();
+         }
+
+
     });
 
-}]);
+  }]);
 
 }());
 
