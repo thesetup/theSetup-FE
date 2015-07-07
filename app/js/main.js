@@ -4,6 +4,15 @@
 
   angular.module('app', ['ui.router', 'ngCookies', 'User', 'Profile', 'Application'])
 
+  .constant('API', {
+    URL: 'https://still-island-6789.herokuapp.com',
+    CONFIG: {
+      headers: {
+        'Access-Token' : ''
+      }
+    }
+  })
+
   .config(['$stateProvider', '$urlRouterProvider',
 
     function ($stateProvider, $urlRouterProvider) {
@@ -15,7 +24,7 @@
           url: '/',
           templateUrl: 'js/templates/home.tpl.html',
           controller: function ($scope, $state, UserService) {
-            if(UserService.checkLogin){
+            if(UserService.checkStatus()){
               $state.go('home.loggedin');
             }else{
               $state.go('home.public');
@@ -110,10 +119,25 @@
           }
         });
 
-
-
     }
 
-  ]);
+  ])
+
+.run(['$rootScope', 'UserService', function ($rootScope, UserService) {
+
+    $rootScope.$on('$stateChangeSuccess', function () {
+      UserService.checkStatus();
+    });
+
+}]);
 
 }());
+
+
+
+
+
+
+
+
+
