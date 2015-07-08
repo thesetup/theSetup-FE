@@ -5,7 +5,7 @@
 
   angular.module('User')
 
-  .service('UserService', ['API','$rootScope','$http', '$cookies', '$location', '$state',  function (API, $rootScope, $http, $cookies, $location, $state) {
+  .service('UserService', ['API','$rootScope','$http', '$cookies','$state',  function (API, $rootScope, $http, $cookies, $state) {
 
 
     var User = function (options) {

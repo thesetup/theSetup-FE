@@ -5,7 +5,7 @@
 $indigo: #536dfe;
 $gray: #727D8C;
 $darkGray: #272822;
-$lightGray: #e0e0e0;
+$lightGray: #bdbdbd;
 $teal: #00bfa5;
 
 
@@ -17,11 +17,94 @@ $roboto: 'Roboto', sans-serif;
 
 .nav-wrapper {
   background-color: $indigo;
+  padding-left: 25px;
+  padding-right: 25px;
 
   a {
-    font-size: 3.5em;
+    font-size: 1em;
+  }
+
+  .brand-logo {
+    font-size: 3em;
+    cursor: pointer;
   }
 }
+
+
+///////////////////////////////////////////////////////////
+//////////// Dashboard ////////////
+////////////////////////////////////////////////////////////
+
+.dashboardDiv {
+  //width: 100%;
+  height: auto;
+  background-color: $lightGray;
+  background-image: linear-gradient($gray, $lightGray);
+}
+
+.profileMgmt {
+  @include span-columns(4);
+  background-color: white;
+  width: 100%;
+  border-radius: 5px;
+  h5 {
+    color: $indigo;
+  }
+}
+
+
+.applicationMgmt {
+  @include span-columns(4);
+  background-color: white;
+  width: 100%;
+  border-radius: 5px;
+  h5 {
+    color: $indigo;
+  }
+}
+
+
+.favsAndRecommended {
+
+  .favorites {
+    @include span-columns(2 of 4);
+    background-color: white;
+    width: 40%;
+    border-radius: 5px;
+    h5 {
+      color: $indigo;
+    }
+  }
+
+  .recommended {
+    @include span-columns(2 of 4);
+    background-color: white;
+    width: 40%;
+    border-radius: 5px;
+    h5 {
+      color: $indigo;
+    }
+  }
+
+}
+
+
+////////////////////////////////////////////////////
+////////// Search /////////////
+/////////////////////////////////////////////////////
+
+.searchDiv {
+  //background-color: $indigo;
+  // background-image: linear-gradient($indigo, white);
+
+  h2 {
+    color: $indigo;
+  }
+}
+
+
+
+
 
 /////////////////////////////////////////////////////
 /////////// About Template //////////
@@ -44,8 +127,8 @@ $roboto: 'Roboto', sans-serif;
   padding: 10px;
   height: 100px;
   overflow: hidden;
-   transition: height 1s;
-  -webkit-transition: height 1s;
+  transition: height 0.5s;
+  -webkit-transition: height 0.5s;
   position: relative;
 
     h3 {
@@ -68,7 +151,7 @@ $roboto: 'Roboto', sans-serif;
   padding: 10px;
   height: 100px;
   overflow: hidden;
-   transition: height 0.5s;
+  transition: height 0.5s;
   -webkit-transition: height 0.5s;
   position: relative;
 
@@ -90,14 +173,14 @@ $roboto: 'Roboto', sans-serif;
 }
 
 .aboutThree {
+  position: relative;
   background-color: $teal;
   border-radius: 5px;
   padding: 10px;
   height: 100px;
-  overflow: hidden;
   transition: height 0.5s;
   -webkit-transition: height 0.5s;
-  position: relative;
+  overflow: hidden;
 
   h3 {
     font-size: 28px;
@@ -130,7 +213,7 @@ $roboto: 'Roboto', sans-serif;
 
     h2 {
       font-family: $roboto;
-      color: $teal;
+      color: $indigo;
     }
 
     p {
@@ -139,7 +222,8 @@ $roboto: 'Roboto', sans-serif;
       padding-top: 15px;
       padding-bottom: 15px;
       background-color: $lightGray;
-      color: $gray;
+      background-image: linear-gradient($indigo, white);
+      color: $darkGray;
       border-radius: 5px;
 
     }

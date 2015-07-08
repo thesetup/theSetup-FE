@@ -7,9 +7,74 @@ html {
   box-sizing: inherit; }
 
 .nav-wrapper {
-  background-color: #536dfe; }
+  background-color: #536dfe;
+  padding-left: 25px;
+  padding-right: 25px; }
   .nav-wrapper a {
-    font-size: 3.5em; }
+    font-size: 1em; }
+  .nav-wrapper .brand-logo {
+    font-size: 3em;
+    cursor: pointer; }
+
+.dashboardDiv {
+  height: auto;
+  background-color: #bdbdbd;
+  background-image: linear-gradient(#727D8C, #bdbdbd); }
+
+.profileMgmt {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  background-color: white;
+  width: 100%;
+  border-radius: 5px; }
+  .profileMgmt:last-child {
+    margin-right: 0; }
+  .profileMgmt h5 {
+    color: #536dfe; }
+
+.applicationMgmt {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  background-color: white;
+  width: 100%;
+  border-radius: 5px; }
+  .applicationMgmt:last-child {
+    margin-right: 0; }
+  .applicationMgmt h5 {
+    color: #536dfe; }
+
+.favsAndRecommended .favorites {
+  float: left;
+  display: block;
+  margin-right: 7.42297%;
+  width: 46.28851%;
+  background-color: white;
+  width: 40%;
+  border-radius: 5px; }
+  .favsAndRecommended .favorites:last-child {
+    margin-right: 0; }
+  .favsAndRecommended .favorites h5 {
+    color: #536dfe; }
+
+.favsAndRecommended .recommended {
+  float: left;
+  display: block;
+  margin-right: 7.42297%;
+  width: 46.28851%;
+  background-color: white;
+  width: 40%;
+  border-radius: 5px; }
+  .favsAndRecommended .recommended:last-child {
+    margin-right: 0; }
+  .favsAndRecommended .recommended h5 {
+    color: #536dfe; }
+
+.searchDiv h2 {
+  color: #536dfe; }
 
 .aboutDiv h2 {
   color: #00bfa5; }
@@ -23,8 +88,8 @@ html {
   padding: 10px;
   height: 100px;
   overflow: hidden;
-  transition: height 1s;
-  -webkit-transition: height 1s;
+  transition: height 0.5s;
+  -webkit-transition: height 0.5s;
   position: relative; }
   .aboutOne h3 {
     font-size: 28px;
@@ -57,14 +122,14 @@ html {
   height: auto; }
 
 .aboutThree {
+  position: relative;
   background-color: #00bfa5;
   border-radius: 5px;
   padding: 10px;
   height: 100px;
-  overflow: hidden;
   transition: height 0.5s;
   -webkit-transition: height 0.5s;
-  position: relative; }
+  overflow: hidden; }
   .aboutThree h3 {
     font-size: 28px;
     color: white;
@@ -85,14 +150,15 @@ html {
   overflow: hidden; }
   .successText h2 {
     font-family: "Roboto", sans-serif;
-    color: #00bfa5; }
+    color: #536dfe; }
   .successText p {
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: #e0e0e0;
-    color: #727D8C;
+    background-color: #bdbdbd;
+    background-image: linear-gradient(#536dfe, white);
+    color: #272822;
     border-radius: 5px; }
 
 .successText:hover {

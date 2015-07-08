@@ -4,7 +4,7 @@
 
   angular.module('User')
 
-  .controller('UserController', ['$scope', '$state', '$location', 'UserService', function ($scope, $state, $location, UserService) {
+  .controller('UserController', ['$scope', '$state','UserService', function ($scope, $state,UserService) {
 
 
     $scope.registerUser =  function (user) {
@@ -20,8 +20,19 @@
     };
 
     $scope.gotoLogin = function () {
-
       $state.go('login');
+    };
+
+    $scope.gotoHome = function () {
+      $state.go('home');
+    };
+
+    $scope.gotoSearch = function (){
+      $state.go('search');
+    };
+
+    $scope.gotoCreate = function () {
+      $state.go('createprofile');
     };
 
   }]);

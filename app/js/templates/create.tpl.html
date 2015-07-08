@@ -1,3 +1,18 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">The Setup</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a ng-click="gotoHome()">Home</a></li>
+        <li><a ng-click="gotoCreate()">Create Profile for Friend</a></li>
+        <li><a ng-click="gotoSearch()">Search</a></li>
+        <li><a ng-click="logoutUser()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
 <h2>Creating a Profile for your Friend is easy as pie!</h2>
 <button class="waves-effect waves-light btn-large indigo accent-2">Save as Draft</button>
 
@@ -13,3 +28,4 @@
 <section ui-view="video"></section>
 
 <section ui-view="review"></section>
+</div>
