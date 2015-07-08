@@ -23,6 +23,100 @@ $roboto: 'Roboto', sans-serif;
   }
 }
 
+/////////////////////////////////////////////////////
+/////////// About Template //////////
+////////////////////////////////////////////////////
+
+.aboutDiv {
+
+  h2 {
+    color: $teal;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+}
+
+.aboutOne {
+  background-color: $teal;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+  overflow: hidden;
+   transition: height 1s;
+  -webkit-transition: height 1s;
+  position: relative;
+
+    h3 {
+      font-size: 28px;
+      color: white;
+    }
+
+    ul {
+      margin-top: 38px;
+    }
+}
+
+.aboutOne:hover {
+  height: auto;
+}
+
+.aboutTwo {
+  background-color: $indigo;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+  overflow: hidden;
+   transition: height 0.5s;
+  -webkit-transition: height 0.5s;
+  position: relative;
+
+  h3 {
+    font-size: 28px;
+    color: white;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 25px;
+  }
+
+  ul {
+    margin-top: 35px;
+  }
+}
+
+.aboutTwo:hover {
+  height: auto;
+}
+
+.aboutThree {
+  background-color: $teal;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+  overflow: hidden;
+  transition: height 0.5s;
+  -webkit-transition: height 0.5s;
+  position: relative;
+
+  h3 {
+    font-size: 28px;
+    color: white;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 25px;
+  }
+
+  ul {
+    margin-top: 35px;
+  }
+}
+
+.aboutThree:hover {
+  height: auto;
+}
+
+
 //////////////////////////////////////////////////////
 /////// News Template //////////////
 //////////////////////////////////////////////////////

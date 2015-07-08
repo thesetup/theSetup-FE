@@ -11,6 +11,72 @@ html {
   .nav-wrapper a {
     font-size: 3.5em; }
 
+.aboutDiv h2 {
+  color: #00bfa5; }
+
+.aboutDiv h5 {
+  font-size: 16px; }
+
+.aboutOne {
+  background-color: #00bfa5;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+  overflow: hidden;
+  transition: height 1s;
+  -webkit-transition: height 1s;
+  position: relative; }
+  .aboutOne h3 {
+    font-size: 28px;
+    color: white; }
+  .aboutOne ul {
+    margin-top: 38px; }
+
+.aboutOne:hover {
+  height: auto; }
+
+.aboutTwo {
+  background-color: #536dfe;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+  overflow: hidden;
+  transition: height 0.5s;
+  -webkit-transition: height 0.5s;
+  position: relative; }
+  .aboutTwo h3 {
+    font-size: 28px;
+    color: white;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 25px; }
+  .aboutTwo ul {
+    margin-top: 35px; }
+
+.aboutTwo:hover {
+  height: auto; }
+
+.aboutThree {
+  background-color: #00bfa5;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100px;
+  overflow: hidden;
+  transition: height 0.5s;
+  -webkit-transition: height 0.5s;
+  position: relative; }
+  .aboutThree h3 {
+    font-size: 28px;
+    color: white;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 25px; }
+  .aboutThree ul {
+    margin-top: 35px; }
+
+.aboutThree:hover {
+  height: auto; }
+
 .successText {
   height: 110px;
   position: relative;
