@@ -29,7 +29,9 @@
               console.log('heyo!');
               $state.go('home.loggedin');
             }else{
-              $state.go('home.public');
+              setTimeout( function () {
+                $state.go('home.public');
+              }, 0);
             }
           }
         })
@@ -135,12 +137,9 @@
 
     $rootScope.$on('$stateChangeSuccess', function () {
 
-      if($state.includes('home')){
-        console.log('in run function');
-           UserService.checkStatus();
-         } else {
-           UserService.checkLogin();
-         }
+      if(!$state.includes('home')){
+        UserService.checkLogin();
+      }
 
 
     });
@@ -148,12 +147,3 @@
   }]);
 
 }());
-
-
-
-
-
-
-
-
-

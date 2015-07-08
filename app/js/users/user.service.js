@@ -71,7 +71,7 @@
 
     this.checkLogin = function () {
       var user = $cookies.get('access_token') !== undefined;
-      if (user !== true) {
+      if (!user && !$state.includes('login')) {
         $state.go('home');
       }
     };
