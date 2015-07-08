@@ -1,7 +1,19 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
+//////////colors//////////////
 $indigo: #536dfe;
+$gray: #727D8C;
+$darkGray: #272822;
+$lightGray: #e0e0e0;
+$teal: #00bfa5;
+
+
+//////////fonts////////////
+$italic: 'Italiana', serif;
+$roboto: 'Roboto', sans-serif;
+
+
 
 .nav-wrapper {
   background-color: $indigo;
@@ -10,4 +22,56 @@ $indigo: #536dfe;
     font-size: 3.5em;
   }
 }
+
+//////////////////////////////////////////////////////
+/////// News Template //////////////
+//////////////////////////////////////////////////////
+
+.successText {
+  height: 110px;
+  position: relative;
+  transition: height 0.5s;
+  -webkit-transition: height 0.5s;
+  overflow: hidden;
+
+    h2 {
+      font-family: $roboto;
+      color: $teal;
+    }
+
+    p {
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      background-color: $lightGray;
+      color: $gray;
+      border-radius: 5px;
+
+    }
+}
+
+.successText:hover {
+  height: 250px;
+}
+
+.successPic {
+  float: left;
+  margin-top: 30px;
+}
+
+.successQuote {
+  float: right;
+  width: 60%;
+  color: $gray;
+  font-family: $italic;
+  font-size: 1.8em;
+  margin-top: 30px;
+}
+
+/////////////////////////////////////////////////////
+////////// Footer /////////////////
+//////////////////////////////////////////////////////
+
+
 

@@ -10,3 +10,36 @@ html {
   background-color: #536dfe; }
   .nav-wrapper a {
     font-size: 3.5em; }
+
+.successText {
+  height: 110px;
+  position: relative;
+  transition: height 0.5s;
+  -webkit-transition: height 0.5s;
+  overflow: hidden; }
+  .successText h2 {
+    font-family: "Roboto", sans-serif;
+    color: #00bfa5; }
+  .successText p {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #e0e0e0;
+    color: #727D8C;
+    border-radius: 5px; }
+
+.successText:hover {
+  height: 250px; }
+
+.successPic {
+  float: left;
+  margin-top: 30px; }
+
+.successQuote {
+  float: right;
+  width: 60%;
+  color: #727D8C;
+  font-family: "Italiana", serif;
+  font-size: 1.8em;
+  margin-top: 30px; }
