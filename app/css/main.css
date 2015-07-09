@@ -85,10 +85,55 @@ html {
     color: white; }
 
 .searchDiv ul select {
-  width: 200px; }
+  width: 150px;
+  display: inline-block;
+  margin-right: 50px; }
 
 .searchDiv h2 {
   color: #536dfe; }
+
+.searchDiv ul li {
+  display: inline-block;
+  margin-right: 100px; }
+
+.createDiv {
+  color: #727D8C; }
+  .createDiv h2 {
+    color: #536dfe;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    padding: 25px; }
+  .createDiv .createTopText {
+    text-align: center; }
+
+.profileQuestions #questionsText {
+  background-color: RGBA(29, 187, 162, 0.5);
+  color: white; }
+
+.profileQuestions .profileGender {
+  display: inline-block;
+  margin-right: 100px; }
+
+.profileQuestions .profileOrientation {
+  display: inline-block; }
+
+.picturesDiv #picturesText {
+  background-color: RGBA(29, 187, 162, 0.5);
+  color: white; }
+
+.videoDiv #videoHeader {
+  color: white;
+  background-color: RGBA(29, 187, 162, 0.5); }
+
+.videoDiv p {
+  text-align: center; }
+
+.reviewDiv #reviewHeader {
+  color: white;
+  background-color: RGBA(29, 187, 162, 0.5); }
+
+.reviewDiv p {
+  text-align: center; }
 
 .aboutDiv h2 {
   color: #00bfa5; }

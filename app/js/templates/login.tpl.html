@@ -24,6 +24,7 @@
 <h2>Register</h2>
 <div class="register">
   <form ng-submit="registerUser(reg)">
+    <input type="text" id="regusername" ng-model="reg.username" placeholder="username"/>
     <input type="email" id="regemail" ng-model="reg.email" placeholder=" email address"/>
     <input type="password" id="regpassword" ng-model="reg.password" placeholder=" password"/>
     <button class="waves-effect waves-light btn-large indigo accent-2">Register</button>

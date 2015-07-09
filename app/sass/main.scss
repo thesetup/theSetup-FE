@@ -109,16 +109,92 @@ $roboto: 'Roboto', sans-serif;
 .searchDiv {
 
   ul select {
-    width: 200px;
+    width: 150px;
+    display: inline-block;
+    margin-right: 50px;
   }
 
   h2 {
     color: $indigo;
   }
+
+  ul li {
+    display: inline-block;
+    margin-right: 100px;
+  }
 }
 
 
+/////////////////////////////////////////////////////
+/////////// Create Div ////////////
+/////////////////////////////////////////////////////
 
+.createDiv {
+
+  color: $gray;
+
+  h2 {
+  color: $indigo;
+  border: 1px solid $lightGray;
+  border-radius: 5px;
+  padding: 25px;
+  }
+
+  .createTopText {
+    text-align: center;
+  }
+
+}
+
+.profileQuestions {
+
+  #questionsText {
+    background-color: RGBA(29, 187, 162, 0.5);
+    color: white;
+  }
+
+  .profileGender {
+    display: inline-block;
+    margin-right: 100px;
+  }
+
+  .profileOrientation {
+    display: inline-block;
+  }
+}
+
+.picturesDiv {
+
+  #picturesText {
+    background-color: RGBA(29, 187, 162, 0.5);
+    color: white;
+  }
+}
+
+.videoDiv {
+
+  #videoHeader {
+    color: white;
+    background-color: RGBA(29, 187, 162, 0.5);
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.reviewDiv {
+
+  #reviewHeader {
+    color: white;
+    background-color: RGBA(29, 187, 162, 0.5);
+
+  }
+
+  p {
+    text-align: center;
+  }
+}
 
 
 

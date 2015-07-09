@@ -11,6 +11,7 @@
     var User = function (options) {
       this.email = options.email;
       this.password = options.password;
+      this.username = options.username;
     };
 
     var _updateConfig = function (user) {

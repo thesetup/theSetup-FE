@@ -12,12 +12,12 @@
   </select>
 
   <label>Maximum Age</label>
-  <select ng=model="search.maxAge" class="browser-default">
+  <select ng-model="search.maxAge" class="browser-default">
     <option  disabled selected>Select Age</option>
     <option ng-repeat="a in range(18,85)" value="{{ a }}">{{ a }}</option>
   </select>
 
-  <input type="text" placeholder="location">
+  <input type="text" placeholder="Location">
 
 
 

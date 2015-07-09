@@ -1,14 +1,44 @@
-<h2>This is the Profile Questionnaire</h2>
-<form>
-  <input type="text" ng-model="profile.name" placeholder="friend's name">
-  <input type="text" ng-model="profile.email" placeholder="friend's email address">
+<div class="profileQuestions">
+<h2 id="questionsText" class="brand-logo center">Profile Questions</h2>
+<form ng-submit="createProfileQuestions(profile)">
+<ul>
+  <li>
+  <input type="text" ng-model="profile.first_name" placeholder="Friend's First Name">
+  </li>
+  <li>
+  <input type="text" ng-model="profile.last_name" placeholder="Friend's Last Name">
+  </li>
+  <li>
+  <input type="email" ng-model="profile.email" placeholder="friend's email address">
   <small>We will notify your friend via email once their profile is created</small>
+  </li>
+  <li>
   <input type="text" ng-model="profile.birthYear" placeholder="friend's year of birth">
+  </li>
+  <li>
   <input type="text" ng-model="profile.location" placeholder="friend's location">
-  <input type="text" ng-model="profile.gender" placeholder="friend's gender">
-  <input type="text" ng-model="profile.orientation" placeholder="gay or straight?">
+  </li>
+  <li>
   <input type="text" ng-model="profile.occupation" placeholder="friend's occupation">
+  </li>
+
+  <li class="profileGender">
+  <h6>Friend's Gender</h6>
+  <input type="radio" name="gender" class="with-gap" id="profile-male" value="male" ng-model="profile.gender">
+  <label for="profile-male">Male</label>
+  <input type="radio" name="gender" class="with-gap" id="profile-female" value="female" ng-model="profile.gender">
+  <label for="profile-female">Female</label>
+  </li>
 
 
+  <li class="profileOrientation">
+  <h6>Friend's Orientation</h6>
+  <input type="radio" name="orientation" class="with-gap" id="profile-straight" ng-model="profile.orientation">
+  <label for="profile-straight">Straight</label>
+  <input type="radio" name="orientation" class="with-gap" id="profile-gay" ng-model="profile.orientation">
+  <label for="profile-straight">Gay</label>
+  </li>
 
+</ul>
 </form>
+</div>
