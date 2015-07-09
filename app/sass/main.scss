@@ -107,13 +107,17 @@ $roboto: 'Roboto', sans-serif;
 /////////////////////////////////////////////////////
 
 .searchDiv {
-  //background-color: $indigo;
-  // background-image: linear-gradient($indigo, white);
+
+  ul select {
+    width: 200px;
+  }
 
   h2 {
     color: $indigo;
   }
 }
+
+
 
 
 

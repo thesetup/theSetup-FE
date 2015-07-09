@@ -84,6 +84,9 @@ html {
   .favsAndRecommended .recommended h5 {
     color: white; }
 
+.searchDiv ul select {
+  width: 200px; }
+
 .searchDiv h2 {
   color: #536dfe; }
 

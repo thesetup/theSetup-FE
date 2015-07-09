@@ -1,25 +1,37 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">The Setup</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/#/">Home</a></li>
+        <li><a href="/#/create">Create Profile for Friend</a></li>
+        <li><a href="/search">Search</a></li>
+        <li><a ng-click="logoutUser()">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-
+<div class="container">
 <div class="searchDiv">
 <h2 class="brand-logo center">Search</h2>
+
 <form ng-submit="">
-<ul>
+<ul class="searchList">
 
   <label>Minimum Age</label>
   <select ng-model="search.minAge" class="browser-default">
-    <option disabled selected>Select Age</option>
+    <option  disabled selected>Select Age</option>
     <option ng-repeat="a in range(18,85)" value="{{ a }}">{{ a }}</option>
   </select>
 
   <label>Maximum Age</label>
-  <select ng=model="search.maxAge" class="browser-default">
+  <select ng-model="search.maxAge" class="browser-default">
     <option  disabled selected>Select Age</option>
     <option ng-repeat="a in range(18,85)" value="{{ a }}">{{ a }}</option>
   </select>
 
   <input type="text" placeholder="location">
-
-
 
   <li>
   <h6>Gender</h6>
@@ -36,7 +48,9 @@
   <input type="radio" name="orientation" class="with-gap" id="search-gay" ng-model="search.orientation">
   <label for="search-straight">Gay</label>
   </li>
+
 </ul>
 </form>
 <button class="waves-effect waves-light btn-large indigo accent-2 center">Search</button>
+</div>
 </div>

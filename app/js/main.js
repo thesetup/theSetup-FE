@@ -86,7 +86,7 @@
         })
         .state('search', {
           url: '/search',
-          templateUrl: 'js/templates/search.tpl.html',
+          templateUrl: 'js/templates/searchmain.tpl.html',
           controller: 'SearchController'
         })
         .state('searchresults', {
