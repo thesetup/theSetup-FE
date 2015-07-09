@@ -11,67 +11,78 @@ html {
   padding-left: 25px;
   padding-right: 25px; }
   .nav-wrapper a {
-    font-size: 1em; }
+    font-size: 1em;
+    cursor: pointer; }
   .nav-wrapper .brand-logo {
     font-size: 3em;
     cursor: pointer; }
 
 .dashboardDiv {
-  height: auto;
-  background-color: #bdbdbd;
-  background-image: linear-gradient(#727D8C, #bdbdbd); }
+  background-color: white; }
 
 .profileMgmt {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  background-color: white;
+  background-color: RGBA(29, 187, 162, 0.5);
   width: 100%;
-  border-radius: 5px; }
+  border-radius: 5px;
+  height: 200px;
+  margin: 15px auto;
+  padding: 15px; }
   .profileMgmt:last-child {
     margin-right: 0; }
   .profileMgmt h5 {
-    color: #536dfe; }
+    color: white; }
 
 .applicationMgmt {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  background-color: white;
+  background-color: RGBA(252, 88, 47, 0.5);
   width: 100%;
-  border-radius: 5px; }
+  border-radius: 5px;
+  height: 200px;
+  margin: 15px auto;
+  padding: 15px; }
   .applicationMgmt:last-child {
     margin-right: 0; }
   .applicationMgmt h5 {
-    color: #536dfe; }
+    color: white; }
 
 .favsAndRecommended .favorites {
   float: left;
   display: block;
   margin-right: 7.42297%;
   width: 46.28851%;
-  background-color: white;
+  background-color: RGBA(255, 64, 129, 0.5);
   width: 40%;
-  border-radius: 5px; }
+  border-radius: 5px;
+  height: 200px;
+  margin: 15px auto;
+  padding: 15px; }
   .favsAndRecommended .favorites:last-child {
     margin-right: 0; }
   .favsAndRecommended .favorites h5 {
-    color: #536dfe; }
+    color: white; }
 
 .favsAndRecommended .recommended {
   float: left;
   display: block;
   margin-right: 7.42297%;
   width: 46.28851%;
-  background-color: white;
+  background-color: RGBA(185, 107, 198, 0.5);
   width: 40%;
-  border-radius: 5px; }
+  border-radius: 5px;
+  height: 200px;
+  margin: 15px auto;
+  padding: 15px; }
   .favsAndRecommended .recommended:last-child {
     margin-right: 0; }
   .favsAndRecommended .recommended h5 {
-    color: #536dfe; }
+    color: white; }
 
 .searchDiv h2 {
   color: #536dfe; }
@@ -83,7 +94,7 @@ html {
   font-size: 16px; }
 
 .aboutOne {
-  background-color: #00bfa5;
+  background-color: RGBA(29, 187, 162, 0.5);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -98,10 +109,10 @@ html {
     margin-top: 38px; }
 
 .aboutOne:hover {
-  height: auto; }
+  height: 400px; }
 
 .aboutTwo {
-  background-color: #536dfe;
+  background-color: RGBA(255, 64, 129, 0.5);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -119,11 +130,11 @@ html {
     margin-top: 35px; }
 
 .aboutTwo:hover {
-  height: auto; }
+  height: 450px; }
 
 .aboutThree {
   position: relative;
-  background-color: #00bfa5;
+  background-color: RGBA(185, 107, 198, 0.5);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -140,7 +151,7 @@ html {
     margin-top: 35px; }
 
 .aboutThree:hover {
-  height: auto; }
+  height: 400px; }
 
 .successText {
   height: 110px;
@@ -156,17 +167,18 @@ html {
     padding-right: 50px;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: #bdbdbd;
-    background-image: linear-gradient(#536dfe, white);
-    color: #272822;
-    border-radius: 5px; }
+    color: white;
+    border-radius: 5px;
+    background-color: RGBA(29, 187, 162, 0.5);
+    font-size: 18px; }
 
 .successText:hover {
-  height: 250px; }
+  height: 300px; }
 
 .successPic {
   float: left;
-  margin-top: 30px; }
+  margin-top: 30px;
+  border-radius: 5px; }
 
 .successQuote {
   float: right;

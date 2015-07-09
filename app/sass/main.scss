@@ -7,6 +7,9 @@ $gray: #727D8C;
 $darkGray: #272822;
 $lightGray: #bdbdbd;
 $teal: #00bfa5;
+$orange: #ff5722;
+$pink: #ff4081;
+$purple: #ba68c8;
 
 
 //////////fonts////////////
@@ -22,6 +25,7 @@ $roboto: 'Roboto', sans-serif;
 
   a {
     font-size: 1em;
+    cursor: pointer;
   }
 
   .brand-logo {
@@ -36,30 +40,33 @@ $roboto: 'Roboto', sans-serif;
 ////////////////////////////////////////////////////////////
 
 .dashboardDiv {
-  //width: 100%;
-  height: auto;
-  background-color: $lightGray;
-  background-image: linear-gradient($gray, $lightGray);
+  background-color: white;
 }
 
 .profileMgmt {
   @include span-columns(4);
-  background-color: white;
+  background-color: RGBA(29, 187, 162, 0.5);
   width: 100%;
   border-radius: 5px;
+  height: 200px;
+  margin: 15px auto;
+  padding: 15px;
   h5 {
-    color: $indigo;
+    color: white;
   }
 }
 
 
 .applicationMgmt {
   @include span-columns(4);
-  background-color: white;
+  background-color: RGBA(252, 88, 47, 0.5);
   width: 100%;
   border-radius: 5px;
+  height: 200px;
+  margin: 15px auto;
+  padding: 15px;
   h5 {
-    color: $indigo;
+    color: white;
   }
 }
 
@@ -68,21 +75,27 @@ $roboto: 'Roboto', sans-serif;
 
   .favorites {
     @include span-columns(2 of 4);
-    background-color: white;
+    background-color: RGBA(255, 64, 129, 0.5);
     width: 40%;
     border-radius: 5px;
+    height: 200px;
+    margin: 15px auto;
+    padding: 15px;
     h5 {
-      color: $indigo;
+      color: white;
     }
   }
 
   .recommended {
     @include span-columns(2 of 4);
-    background-color: white;
+    background-color: RGBA(185, 107, 198, 0.5);
     width: 40%;
     border-radius: 5px;
+    height: 200px;
+    margin: 15px auto;
+    padding: 15px;
     h5 {
-      color: $indigo;
+      color: white;
     }
   }
 
@@ -122,7 +135,7 @@ $roboto: 'Roboto', sans-serif;
 }
 
 .aboutOne {
-  background-color: $teal;
+  background-color: RGBA(29, 187, 162, 0.5);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -142,11 +155,11 @@ $roboto: 'Roboto', sans-serif;
 }
 
 .aboutOne:hover {
-  height: auto;
+  height: 400px;
 }
 
 .aboutTwo {
-  background-color: $indigo;
+  background-color: RGBA(255, 64, 129, 0.5);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -169,12 +182,12 @@ $roboto: 'Roboto', sans-serif;
 }
 
 .aboutTwo:hover {
-  height: auto;
+  height: 450px;
 }
 
 .aboutThree {
   position: relative;
-  background-color: $teal;
+  background-color: RGBA(185, 107, 198, 0.5);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -196,7 +209,7 @@ $roboto: 'Roboto', sans-serif;
 }
 
 .aboutThree:hover {
-  height: auto;
+  height: 400px;
 }
 
 
@@ -221,21 +234,22 @@ $roboto: 'Roboto', sans-serif;
       padding-right: 50px;
       padding-top: 15px;
       padding-bottom: 15px;
-      background-color: $lightGray;
-      background-image: linear-gradient($indigo, white);
-      color: $darkGray;
+      color: white;
       border-radius: 5px;
+      background-color: RGBA(29, 187, 162, 0.5);
+      font-size: 18px;
 
     }
 }
 
 .successText:hover {
-  height: 250px;
+  height: 300px;
 }
 
 .successPic {
   float: left;
   margin-top: 30px;
+  border-radius: 5px;
 }
 
 .successQuote {
