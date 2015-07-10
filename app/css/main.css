@@ -20,6 +20,11 @@ html {
 .dashboardDiv {
   background-color: white; }
 
+.personal {
+  color: #536dfe;
+  font-size: 2em;
+  margin-left: 25px; }
+
 .profileMgmt {
   float: left;
   display: block;
@@ -52,36 +57,20 @@ html {
   .applicationMgmt h5 {
     color: white; }
 
-.favsAndRecommended .favorites {
+.favorites {
   float: left;
   display: block;
-  margin-right: 7.42297%;
-  width: 46.28851%;
+  margin-right: 2.35765%;
+  width: 31.76157%;
   background-color: RGBA(255, 64, 129, 0.5);
-  width: 40%;
+  width: 100%;
   border-radius: 5px;
   height: 200px;
   margin: 15px auto;
   padding: 15px; }
-  .favsAndRecommended .favorites:last-child {
+  .favorites:last-child {
     margin-right: 0; }
-  .favsAndRecommended .favorites h5 {
-    color: white; }
-
-.favsAndRecommended .recommended {
-  float: left;
-  display: block;
-  margin-right: 7.42297%;
-  width: 46.28851%;
-  background-color: RGBA(185, 107, 198, 0.5);
-  width: 40%;
-  border-radius: 5px;
-  height: 200px;
-  margin: 15px auto;
-  padding: 15px; }
-  .favsAndRecommended .recommended:last-child {
-    margin-right: 0; }
-  .favsAndRecommended .recommended h5 {
+  .favorites h5 {
     color: white; }
 
 .searchDiv ul select {

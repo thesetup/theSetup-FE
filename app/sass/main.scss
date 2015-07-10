@@ -23,6 +23,7 @@ $roboto: 'Roboto', sans-serif;
   padding-left: 25px;
   padding-right: 25px;
 
+
   a {
     font-size: 1em;
     cursor: pointer;
@@ -41,6 +42,12 @@ $roboto: 'Roboto', sans-serif;
 
 .dashboardDiv {
   background-color: white;
+}
+
+.personal {
+  color: $indigo;
+  font-size: 2em;
+  margin-left: 25px;
 }
 
 .profileMgmt {
@@ -71,35 +78,34 @@ $roboto: 'Roboto', sans-serif;
 }
 
 
-.favsAndRecommended {
 
-  .favorites {
-    @include span-columns(2 of 4);
-    background-color: RGBA(255, 64, 129, 0.5);
-    width: 40%;
-    border-radius: 5px;
-    height: 200px;
-    margin: 15px auto;
-    padding: 15px;
-    h5 {
+
+.favorites {
+  @include span-columns(4);
+  background-color: RGBA(255, 64, 129, 0.5);
+  width: 100%;
+  border-radius: 5px;
+  height: 200px;
+  margin: 15px auto;
+  padding: 15px;
+  h5 {
       color: white;
     }
   }
 
-  .recommended {
-    @include span-columns(2 of 4);
-    background-color: RGBA(185, 107, 198, 0.5);
-    width: 40%;
-    border-radius: 5px;
-    height: 200px;
-    margin: 15px auto;
-    padding: 15px;
-    h5 {
-      color: white;
-    }
-  }
+  // .recommended {
+  //   @include span-columns(2 of 4);
+  //   background-color: RGBA(185, 107, 198, 0.5);
+  //   width: 40%;
+  //   border-radius: 5px;
+  //   height: 200px;
+  //   margin: 15px auto;
+  //   padding: 15px;
+  //   h5 {
+  //     color: white;
+  //   }
+  // }
 
-}
 
 
 ////////////////////////////////////////////////////

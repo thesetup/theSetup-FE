@@ -31,7 +31,9 @@
     };
 
     this.profileCreation = function (profile) {
+      console.log('inside profileCreation!');
       var p = new Profile(profile);
+      console.log(p);
       $http.post({
         method: 'POST',
         url: API.URL + '/profiles',
@@ -39,6 +41,7 @@
         params: p
       })
       .success( function (data) {
+        console.log(data);
         _profileSuccess(data);
       });
     };

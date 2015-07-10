@@ -7,6 +7,7 @@
   .controller('ProfileController', ['$scope', '$state', 'ProfileService', function ($scope, $state, ProfileService) {
 
     $scope.createProfile = function (profile) {
+      console.log('inside controller!');
       ProfileService.profileCreation(profile);
     };
 

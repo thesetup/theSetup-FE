@@ -4,13 +4,9 @@
 
   angular.module('User')
 
-  .controller('DashboardController', ['$scope', 'UserService', function ($scope, UserService) {
+  .controller('DashboardController', ['$scope', '$cookies', '$http', '$state', 'UserService', 'ProfileService', function ($scope, $cookies, $http, $state, UserService, ProfileService) {
 
-
-    $('#taketosearch').on('click', function () {
-      window.location = '/#search';
-    });
-
+    $scope.user = $cookies.getObject('currentUser');
 
   }]);
 

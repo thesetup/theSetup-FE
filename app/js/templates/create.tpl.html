@@ -1,7 +1,7 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">The Setup</a>
+      <a href="#" class="brand-logo">Setup</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/#/">Home</a></li>
         <li><a ng-click="gotoCreate()">Create Profile for Friend</a></li>
@@ -20,13 +20,126 @@
 <div class="createTopText">
 <h5>You can create a profile in 4 easy steps using the web app or the mobile app</h5>
 <small>Please note you will be required to submit a video for this profile. You can create a video using the mobile app or you can upload a youtube link.</small>
+
+<div class="profileQuestions">
+<h2 id="questionsText" class="brand-logo center">Profile Questions</h2>
+
+<!-- <form ng-submit="createProfile(profile)">
+  <input type="text" ng-model="profile.name">
+  <button>Submit</button>
+</form> -->
+
+<form ng-submit="createProfile(profile)">
+<ul>
+  <li>
+  <input type="text" ng-model="profile.first_name" placeholder="Friend's First Name">
+  </li>
+  <li>
+  <input type="email" ng-model="profile.email" placeholder="friend's email address">
+  <small>We will notify your friend via email once their profile is created</small>
+  </li>
+  <li>
+  <input type="text" ng-model="profile.birthYear" placeholder="friend's year of birth">
+  </li>
+  <li>
+  <input type="text" ng-model="profile.location" placeholder="friend's location">
+  </li>
+  <li>
+  <input type="text" ng-model="profile.occupation" placeholder="friend's occupation">
+  </li>
+
+  <li class="profileGender">
+  <h6>Friend's Gender</h6>
+  <input type="radio" name="gender" class="with-gap" id="profile-male" value="male" ng-model="profile.gender">
+  <label for="profile-male">Male</label>
+  <input type="radio" name="gender" class="with-gap" id="profile-female" value="female" ng-model="profile.gender">
+  <label for="profile-female">Female</label>
+  </li>
+
+
+  <li class="profileOrientation">
+  <h6>Friend's Orientation</h6>
+  <input type="radio" name="orientation" class="with-gap" id="profile-straight" value="straight" ng-model="profile.orientation">
+  <label for="profile-straight">Straight</label>
+  <input type="radio" name="orientation" class="with-gap" id="profile-gay" value="gay" ng-model="profile.orientation">
+  <label for="profile-straight">Gay</label>
+  </li>
+
+</ul>
+<button>Submit</button>
+</form>
+</div> <!-- end of profileQuestions -->
+
+<div class="picturesDiv">
+<h2 id="picturesText" class="brand-logo center">Profile Pictures</h2>
+
+    <div class="file-field input-field">
+      <input class="file-path validate" type="text"/>
+      <div class="btn">
+        <span>Main Photo</span>
+        <input type="file" ng-model="profile.mainPic" onchange="angular.element(this).scope().setFiles(this)"/>
+      </div>
+    </div>
+
+    <div class="file-field input-field">
+      <input class="file-path validate" type="text"/>
+      <div class="btn">
+        <span>Optional Photo 1</span>
+        <input type="file" ng-model="profile.optional_pic1"/>
+      </div>
+    </div>
+
+    <div class="file-field input-field">
+      <input class="file-path validate" type="text"/>
+      <div class="btn">
+        <span>Optional Photo 2</span>
+        <input type="file" ng-model="profile.optional_pic2"/>
+      </div>
+    </div>
+
+    <div class="file-field input-field">
+      <input class="file-path validate" type="text"/>
+      <div class="btn">
+        <span>Optional Photo 3</span>
+        <input type="file" ng-model="profile.optional_pic3"/>
+      </div>
+    </div>
+
+    <div class="file-field input-field">
+      <input class="file-path validate" type="text"/>
+      <div class="btn">
+        <span>Optional Photo 4</span>
+        <input type="file" ng-model="profile.optional_pic4"/>
+      </div>
+    </div>
+
+    <div class="file-field input-field">
+      <input class="file-path validate" type="text"/>
+      <div class="btn">
+        <span>Optional Photo 5</span>
+        <input type="file" ng-model="profile.optional_pic5"/>
+      </div>
+    </div>
+<br>
+<br>
+
+<!-- </ul>
+<button>Submit</button>
+</form> -->
+
+</div> <!-- end of PicturesDiv -->
+
+<div class="videoDiv">
+<h2 id="videoHeader" class="brand-logo center">Profile Videos</h2>
+<input type="url" ng-model="profile.mainVid" placeholder="Main Video Link *2 min max">
+<input type="url" ng-model="profile.hobbies_vid" placeholder="Optional Video Link about Hobbies *30 sec max">
+<input type="url" ng-model="profile.tastes_vid" placeholder="Optional Video Link about Tastes *30 sec max">
+<input type="url" ng-model="profile.looking_for_vid" placeholder="Optional Video Link about the type of person best suited for your friend *1 min max">
+<p>Think of this as a documentary about your friend. The main video is a video of you (and others) describing your friend. You can include footage of your friend. The more entertaining, the better! Maximum video length is 2 minutes. You can quickly create videos using our mobile app. <button class="waves-effect waves-light btn-large indigo accent-2">download mobile app</button></p>
+</div> <!-- end of videoDiv -->
+<button>Submit</button>
+</form><!-- end of createProfile form -->
+
 </div>
-<section ui-view="questions"></section>
-
-<section ui-view="pictures"></section>
-
-<section ui-view="video"></section>
-
-<section ui-view="review"></section>
 </div>
 </div>
