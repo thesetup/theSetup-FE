@@ -1,12 +1,12 @@
 <div class="picturesDiv">
 <h2 id="picturesText" class="brand-logo center">Profile Pictures</h2>
 
-  <form action="#">
+  <form ng-submit="createProfile(profile)">
     <div class="file-field input-field">
       <input class="file-path validate" type="text"/>
       <div class="btn">
         <span>Main Photo</span>
-        <input type="file" />
+        <input type="file" ng-model="profile.mainPic"/>
       </div>
     </div>
 
@@ -14,7 +14,7 @@
       <input class="file-path validate" type="text"/>
       <div class="btn">
         <span>Optional Photo 1</span>
-        <input type="file" />
+        <input type="file" ng-model="profile.optional_pic1"/>
       </div>
     </div>
 
@@ -22,7 +22,7 @@
       <input class="file-path validate" type="text"/>
       <div class="btn">
         <span>Optional Photo 2</span>
-        <input type="file" />
+        <input type="file" ng-model="profile.optional_pic2"/>
       </div>
     </div>
 
@@ -30,7 +30,7 @@
       <input class="file-path validate" type="text"/>
       <div class="btn">
         <span>Optional Photo 3</span>
-        <input type="file" />
+        <input type="file" ng-model="profile.optional_pic3"/>
       </div>
     </div>
 
@@ -38,7 +38,7 @@
       <input class="file-path validate" type="text"/>
       <div class="btn">
         <span>Optional Photo 4</span>
-        <input type="file" />
+        <input type="file" ng-model="profile.optional_pic4"/>
       </div>
     </div>
 
@@ -46,7 +46,7 @@
       <input class="file-path validate" type="text"/>
       <div class="btn">
         <span>Optional Photo 5</span>
-        <input type="file" />
+        <input type="file" ng-model="profile.optional_pic5"/>
       </div>
     </div>
   </form>

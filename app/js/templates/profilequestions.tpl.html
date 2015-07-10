@@ -1,12 +1,11 @@
 <div class="profileQuestions">
 <h2 id="questionsText" class="brand-logo center">Profile Questions</h2>
-<form ng-submit="createProfileQuestions(profile)">
+
+
+<form ng-submit="createProfile(profile)">
 <ul>
   <li>
   <input type="text" ng-model="profile.first_name" placeholder="Friend's First Name">
-  </li>
-  <li>
-  <input type="text" ng-model="profile.last_name" placeholder="Friend's Last Name">
   </li>
   <li>
   <input type="email" ng-model="profile.email" placeholder="friend's email address">

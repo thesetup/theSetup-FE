@@ -123,7 +123,7 @@
           }
         })
         .state('singleprofile', {
-          url: 'single',
+          url: 'profiles/:profile_id',
           templateUrl: 'js/templates/singleprofile.tpl.html',
           controller: 'ProfileController'
         });
