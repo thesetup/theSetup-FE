@@ -14,12 +14,6 @@
       this.orientation = options.orientation;
       this.location = options.location;
       this.birthYear = options.birthYear;
-      this.mainPic = options.mainPic;
-      this.optional_pic1 = options.optional_pic1;
-      this.optional_pic2 = options.optional_pic2;
-      this.optional_pic3 = options.optional_pic3;
-      this.optional_pic4 = options.optional_pic4;
-      this.optional_pic5 = options.optional_pic5;
       this.mainVid = options.mainVid;
       this.hobbies_vid = options.hobbies_vid;
       this.tastes_vid = options.tastes_vid;
@@ -56,6 +50,38 @@
       })
       .success (function (data) {
         $state.reload();
+      });
+    };
+
+
+    this.imageUpload = function () {
+      var mainPic = document.getElementById('mainPhoto').files[0];
+      var optPic1 = document.getElementById('optPic1').files[1];
+      var optPic2 = document.getElementById('optPic2').files[2];
+      var optPic3 = document.getElementById('optPic3').files[3];
+      var optPic4 = document.getElementById('optPic4').files[4];
+      var optPic5 = document.getElementById('optPic5').files[5];
+
+
+      var headers = {
+        'Content-Type' : undefined
+      };
+      var formData = new FormData();
+      formData.append('file[image]', mainPic);
+      formData.append('file[image]', optPic1);
+      formData.append('file[image]', optPic2);
+      formData.append('file[image]', optPic3);
+      formData.append('file[image]', optPic4);
+      formData.append('file[image]', optPic5);
+
+      console.log(formData);
+
+      $http({
+        method: 'POST',
+        url: API.URL + '/profiles',
+        data: formData,
+        headers: headers
+
       });
     };
 

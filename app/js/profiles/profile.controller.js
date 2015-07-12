@@ -6,9 +6,9 @@
 
   .controller('ProfileController', ['$scope', '$state', 'ProfileService', function ($scope, $state, ProfileService) {
 
-    $(document).ready(function(){
-    $('.scrollspy').scrollSpy();
-    });
+   $scope.uploadImages = function () {
+    ProfileService.imageUpload();
+   };
 
     $scope.createProfile = function (profile) {
       console.log('inside controller!');

@@ -151,12 +151,14 @@ button:before {
 
 }
 
+
 .profileQuestions {
 
   border: 1px solid $gray;
   border-radius: 5px;
   width: 70%;
   padding: 25px;
+  margin: 0 auto;
   margin-top: 25px;
 
 
@@ -181,11 +183,17 @@ button:before {
   border-radius: 5px;
   width: 70%;
   padding: 25px;
+  margin: 0 auto;
   margin-top: 25px;
 
   #picturesText {
     background-color: RGBA(30, 192, 185, 1);
     color: white;
+  }
+
+  label {
+    color: $indigo;
+    font-size: 16px;
   }
 }
 
@@ -195,6 +203,7 @@ button:before {
   border-radius: 5px;
   width: 70%;
   padding: 25px;
+  margin: 0 auto;
   margin-top: 25px;
 
   #videoHeader {

@@ -60,7 +60,7 @@
   <input type="radio" name="orientation" class="with-gap" id="profile-straight" value="straight" ng-model="profile.orientation">
   <label for="profile-straight">Straight</label>
   <input type="radio" name="orientation" class="with-gap" id="profile-gay" value="gay" ng-model="profile.orientation">
-  <label for="profile-straight">Gay</label>
+  <label for="profile-gay">Gay</label>
   </li>
 
 </ul>
@@ -83,54 +83,36 @@
 
 <div class="picturesDiv">
 <h2 id="picturesText" class="brand-logo center">Step 3: Pictures</h2>
+<form ng-submit="uploadImages()">
 
-    <div class="file-field input-field">
-      <input class="file-path validate" type="text"/>
-      <div class="btn">
-        <span>Main Photo</span>
-        <input type="file" ng-model="profile.mainPic" onchange="angular.element(this).scope().setFiles(this)"/>
-      </div>
-    </div>
-
-    <div class="file-field input-field">
-      <input class="file-path validate" type="text"/>
-      <div class="btn">
-        <span>Optional Photo 1</span>
-        <input type="file" ng-model="profile.optional_pic1"/>
-      </div>
-    </div>
-
-    <div class="file-field input-field">
-      <input class="file-path validate" type="text"/>
-      <div class="btn">
-        <span>Optional Photo 2</span>
-        <input type="file" ng-model="profile.optional_pic2"/>
-      </div>
-    </div>
-
-    <div class="file-field input-field">
-      <input class="file-path validate" type="text"/>
-      <div class="btn">
-        <span>Optional Photo 3</span>
-        <input type="file" ng-model="profile.optional_pic3"/>
-      </div>
-    </div>
-
-    <div class="file-field input-field">
-      <input class="file-path validate" type="text"/>
-      <div class="btn">
-        <span>Optional Photo 4</span>
-        <input type="file" ng-model="profile.optional_pic4"/>
-      </div>
-    </div>
-
-    <div class="file-field input-field">
-      <input class="file-path validate" type="text"/>
-      <div class="btn">
-        <span>Optional Photo 5</span>
-        <input type="file" ng-model="profile.optional_pic5"/>
-      </div>
-    </div>
+<div class="mainPhoto">
+    <label for="mainPhoto">Main Photo</label>
+    <input type="file" id="mainPhoto"/>
+</div>
+<div>
+    <label for="optPic1">Optional Photo 1</label>
+    <input type="file" id="optPic1"/>
+</div>
+<div>
+    <label for="optPic2">Optional Photo 2</label>
+    <input type="file" id="optPic2"/>
+</div>
+<div>
+    <label for="optPic3">Optional Photo 3</label>
+    <input type="file" id="optPic3"/>
+</div>
+<div>
+    <label for="optPic4">Optional Photo 4</label>
+    <input type="file" id="optPic4"/>
+</div>
+<div>
+    <label for="optPic5">Optional Photo 5</label>
+    <input type="file" id="optPic5"/>
+</div>
+<div class="picsButton">
+<button class="waves-effect waves-light btn-large">Upload Images</button>
+</div>
+</form>
 <br>
 <br>
 
@@ -141,7 +123,7 @@
 </div> <!-- end of PicturesDiv -->
 
 
-<button>Submit</button>
+<button class="waves-effect waves-light btn-large">Submit</button>
 </form><!-- end of createProfile form -->
 </div>
 </div>

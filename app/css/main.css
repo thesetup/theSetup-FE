@@ -106,6 +106,7 @@ button:before {
   border-radius: 5px;
   width: 70%;
   padding: 25px;
+  margin: 0 auto;
   margin-top: 25px; }
   .profileQuestions #questionsText {
     background-color: RGBA(30, 192, 185, 1);
@@ -121,16 +122,21 @@ button:before {
   border-radius: 5px;
   width: 70%;
   padding: 25px;
+  margin: 0 auto;
   margin-top: 25px; }
   .picturesDiv #picturesText {
     background-color: RGBA(30, 192, 185, 1);
     color: white; }
+  .picturesDiv label {
+    color: RGBA(21, 141, 162, 1);
+    font-size: 16px; }
 
 .videoDiv {
   border: 1px solid #727D8C;
   border-radius: 5px;
   width: 70%;
   padding: 25px;
+  margin: 0 auto;
   margin-top: 25px; }
   .videoDiv #videoHeader {
     color: white;
