@@ -6,10 +6,17 @@ html {
 *::before {
   box-sizing: inherit; }
 
+button:before {
+  background-color: RGBA(30, 192, 185, 1); }
+
+.loginDiv h2 {
+  color: RGBA(21, 141, 162, 1); }
+
 .nav-wrapper {
-  background-color: #536dfe;
+  background: linear-gradient(RGBA(21, 141, 162, 1), RGBA(30, 192, 185, 1));
   padding-left: 25px;
-  padding-right: 25px; }
+  padding-right: 25px;
+  padding-top: 5px; }
   .nav-wrapper a {
     font-size: 1em;
     cursor: pointer; }
@@ -21,7 +28,7 @@ html {
   background-color: white; }
 
 .personal {
-  color: #536dfe;
+  color: RGBA(21, 141, 162, 1);
   font-size: 2em;
   margin-left: 25px; }
 
@@ -30,7 +37,7 @@ html {
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  background-color: RGBA(29, 187, 162, 0.5);
+  background-color: RGBA(30, 192, 185, 1);
   width: 100%;
   border-radius: 5px;
   height: 200px;
@@ -46,7 +53,7 @@ html {
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  background-color: RGBA(252, 88, 47, 0.5);
+  background-color: RGBA(21, 141, 162, 1);
   width: 100%;
   border-radius: 5px;
   height: 200px;
@@ -62,7 +69,7 @@ html {
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  background-color: RGBA(255, 64, 129, 0.5);
+  background-color: RGBA(30, 192, 185, 1);
   width: 100%;
   border-radius: 5px;
   height: 200px;
@@ -79,7 +86,7 @@ html {
   margin-right: 50px; }
 
 .searchDiv h2 {
-  color: #536dfe; }
+  color: RGBA(21, 141, 162, 1); }
 
 .searchDiv ul li {
   display: inline-block;
@@ -88,34 +95,48 @@ html {
 .createDiv {
   color: #727D8C; }
   .createDiv h2 {
-    color: #536dfe;
-    border: 1px solid #bdbdbd;
+    color: RGBA(21, 141, 162, 1);
     border-radius: 5px;
     padding: 25px; }
   .createDiv .createTopText {
     text-align: center; }
 
-.profileQuestions #questionsText {
-  background-color: RGBA(29, 187, 162, 0.5);
-  color: white; }
+.profileQuestions {
+  border: 1px solid #727D8C;
+  border-radius: 5px;
+  width: 70%;
+  padding: 25px;
+  margin-top: 25px; }
+  .profileQuestions #questionsText {
+    background-color: RGBA(30, 192, 185, 1);
+    color: white; }
+  .profileQuestions .profileGender {
+    display: inline-block;
+    margin-right: 10px; }
+  .profileQuestions .profileOrientation {
+    display: inline-block; }
 
-.profileQuestions .profileGender {
-  display: inline-block;
-  margin-right: 100px; }
+.picturesDiv {
+  border: 1px solid #727D8C;
+  border-radius: 5px;
+  width: 70%;
+  padding: 25px;
+  margin-top: 25px; }
+  .picturesDiv #picturesText {
+    background-color: RGBA(30, 192, 185, 1);
+    color: white; }
 
-.profileQuestions .profileOrientation {
-  display: inline-block; }
-
-.picturesDiv #picturesText {
-  background-color: RGBA(29, 187, 162, 0.5);
-  color: white; }
-
-.videoDiv #videoHeader {
-  color: white;
-  background-color: RGBA(29, 187, 162, 0.5); }
-
-.videoDiv p {
-  text-align: center; }
+.videoDiv {
+  border: 1px solid #727D8C;
+  border-radius: 5px;
+  width: 70%;
+  padding: 25px;
+  margin-top: 25px; }
+  .videoDiv #videoHeader {
+    color: white;
+    background-color: RGBA(21, 141, 162, 1); }
+  .videoDiv p {
+    text-align: center; }
 
 .reviewDiv #reviewHeader {
   color: white;
@@ -125,13 +146,13 @@ html {
   text-align: center; }
 
 .aboutDiv h2 {
-  color: #00bfa5; }
+  color: RGBA(30, 192, 185, 1); }
 
 .aboutDiv h5 {
   font-size: 16px; }
 
 .aboutOne {
-  background-color: RGBA(29, 187, 162, 0.5);
+  background-color: RGBA(30, 192, 185, 1);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -149,7 +170,7 @@ html {
   height: 400px; }
 
 .aboutTwo {
-  background-color: RGBA(255, 64, 129, 0.5);
+  background-color: RGBA(21, 141, 162, 1);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -171,7 +192,7 @@ html {
 
 .aboutThree {
   position: relative;
-  background-color: RGBA(185, 107, 198, 0.5);
+  background-color: RGBA(30, 192, 185, 1);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -198,7 +219,7 @@ html {
   overflow: hidden; }
   .successText h2 {
     font-family: "Roboto", sans-serif;
-    color: #536dfe; }
+    color: RGBA(21, 141, 162, 1); }
   .successText p {
     padding-left: 50px;
     padding-right: 50px;
@@ -206,7 +227,7 @@ html {
     padding-bottom: 15px;
     color: white;
     border-radius: 5px;
-    background-color: RGBA(29, 187, 162, 0.5);
+    background-color: RGBA(30, 192, 185, 0.5);
     font-size: 18px; }
 
 .successText:hover {

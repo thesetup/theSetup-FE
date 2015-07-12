@@ -7,8 +7,7 @@
   .controller('UserController', ['$rootScope', '$scope', '$cookies', '$state','UserService', function ($rootScope, $scope, $cookies, $state,UserService) {
 
     var user = $cookies.getObject('currentUser');
-    console.log(user);
-    console.log(user.username);
+
 
 
     $scope.registerUser =  function (user) {

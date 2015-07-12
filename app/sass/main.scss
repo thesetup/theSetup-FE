@@ -2,7 +2,7 @@
 @import 'neat/neat';
 
 //////////colors//////////////
-$indigo: #536dfe;
+$indigo: RGBA(21, 141, 162, 1);
 $gray: #727D8C;
 $darkGray: #272822;
 $lightGray: #bdbdbd;
@@ -16,13 +16,24 @@ $purple: #ba68c8;
 $italic: 'Italiana', serif;
 $roboto: 'Roboto', sans-serif;
 
+button:before {
+  background-color: RGBA(30, 192, 185, 1);
+}
+
+.loginDiv {
+
+  h2 {
+    color: RGBA(21, 141, 162, 1);
+  }
+}
+
 
 
 .nav-wrapper {
-  background-color: $indigo;
+  background: linear-gradient(RGBA(21, 141, 162, 1), RGBA(30, 192, 185, 1));
   padding-left: 25px;
   padding-right: 25px;
-
+  padding-top: 5px;
 
   a {
     font-size: 1em;
@@ -52,7 +63,7 @@ $roboto: 'Roboto', sans-serif;
 
 .profileMgmt {
   @include span-columns(4);
-  background-color: RGBA(29, 187, 162, 0.5);
+  background-color: RGBA(30, 192, 185, 1);
   width: 100%;
   border-radius: 5px;
   height: 200px;
@@ -66,7 +77,7 @@ $roboto: 'Roboto', sans-serif;
 
 .applicationMgmt {
   @include span-columns(4);
-  background-color: RGBA(252, 88, 47, 0.5);
+  background-color: RGBA(21, 141, 162, 1);
   width: 100%;
   border-radius: 5px;
   height: 200px;
@@ -82,7 +93,7 @@ $roboto: 'Roboto', sans-serif;
 
 .favorites {
   @include span-columns(4);
-  background-color: RGBA(255, 64, 129, 0.5);
+  background-color: RGBA(30, 192, 185, 1);
   width: 100%;
   border-radius: 5px;
   height: 200px;
@@ -92,19 +103,6 @@ $roboto: 'Roboto', sans-serif;
       color: white;
     }
   }
-
-  // .recommended {
-  //   @include span-columns(2 of 4);
-  //   background-color: RGBA(185, 107, 198, 0.5);
-  //   width: 40%;
-  //   border-radius: 5px;
-  //   height: 200px;
-  //   margin: 15px auto;
-  //   padding: 15px;
-  //   h5 {
-  //     color: white;
-  //   }
-  // }
 
 
 
@@ -135,13 +133,14 @@ $roboto: 'Roboto', sans-serif;
 /////////// Create Div ////////////
 /////////////////////////////////////////////////////
 
+
+
 .createDiv {
 
   color: $gray;
 
   h2 {
   color: $indigo;
-  border: 1px solid $lightGray;
   border-radius: 5px;
   padding: 25px;
   }
@@ -154,14 +153,21 @@ $roboto: 'Roboto', sans-serif;
 
 .profileQuestions {
 
+  border: 1px solid $gray;
+  border-radius: 5px;
+  width: 70%;
+  padding: 25px;
+  margin-top: 25px;
+
+
   #questionsText {
-    background-color: RGBA(29, 187, 162, 0.5);
+    background-color: RGBA(30, 192, 185, 1);
     color: white;
   }
 
   .profileGender {
     display: inline-block;
-    margin-right: 100px;
+    margin-right: 10px;
   }
 
   .profileOrientation {
@@ -171,17 +177,29 @@ $roboto: 'Roboto', sans-serif;
 
 .picturesDiv {
 
+  border: 1px solid $gray;
+  border-radius: 5px;
+  width: 70%;
+  padding: 25px;
+  margin-top: 25px;
+
   #picturesText {
-    background-color: RGBA(29, 187, 162, 0.5);
+    background-color: RGBA(30, 192, 185, 1);
     color: white;
   }
 }
 
 .videoDiv {
 
+  border: 1px solid $gray;
+  border-radius: 5px;
+  width: 70%;
+  padding: 25px;
+  margin-top: 25px;
+
   #videoHeader {
     color: white;
-    background-color: RGBA(29, 187, 162, 0.5);
+    background-color: $indigo;
   }
 
   p {
@@ -212,7 +230,7 @@ $roboto: 'Roboto', sans-serif;
 .aboutDiv {
 
   h2 {
-    color: $teal;
+    color: RGBA(30, 192, 185, 1);
   }
 
   h5 {
@@ -221,7 +239,7 @@ $roboto: 'Roboto', sans-serif;
 }
 
 .aboutOne {
-  background-color: RGBA(29, 187, 162, 0.5);
+  background-color: RGBA(30, 192, 185, 1);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -245,7 +263,7 @@ $roboto: 'Roboto', sans-serif;
 }
 
 .aboutTwo {
-  background-color: RGBA(255, 64, 129, 0.5);
+  background-color: RGBA(21, 141, 162, 1);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -273,7 +291,7 @@ $roboto: 'Roboto', sans-serif;
 
 .aboutThree {
   position: relative;
-  background-color: RGBA(185, 107, 198, 0.5);
+  background-color: RGBA(30, 192, 185, 1);
   border-radius: 5px;
   padding: 10px;
   height: 100px;
@@ -322,7 +340,7 @@ $roboto: 'Roboto', sans-serif;
       padding-bottom: 15px;
       color: white;
       border-radius: 5px;
-      background-color: RGBA(29, 187, 162, 0.5);
+      background-color: RGBA(30, 192, 185, 0.5);
       font-size: 18px;
 
     }

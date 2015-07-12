@@ -6,6 +6,10 @@
 
   .controller('ProfileController', ['$scope', '$state', 'ProfileService', function ($scope, $state, ProfileService) {
 
+    $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+    });
+
     $scope.createProfile = function (profile) {
       console.log('inside controller!');
       ProfileService.profileCreation(profile);

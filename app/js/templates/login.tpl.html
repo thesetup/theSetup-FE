@@ -1,19 +1,20 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a ng-click="gotoHome()" class="brand-logo">Setup</a>
+      <a href="/#/" class="brand-logo center"><img src="images/setup_logo.png" height="56" width="auto"></a>
     </div>
   </nav>
 </div>
 
 <div class="container">
+<div class="loginDiv">
 <h2>Login</h2>
 
 <div class="login">
   <form ng-submit="loginUser(log)">
     <input type="email" id="loginemail" ng-model="log.email" placeholder=" email address"/>
     <input type="password" id="loginpassword" ng-model="log.password" placeholder=" password"/>
-    <button id="loginpageBtn" class="waves-effect waves-light btn-large indigo accent-2">Login</button>
+    <button id="loginpageBtn" class="waves-effect waves-light btn-large RGBA(30, 192, 185, 1)">Login</button>
     <!-- <div class="facebookLogin">
       <button class="waves-effect waves-light btn-large indigo accent-2">Login With Facebook</button>
     </div> -->
@@ -27,11 +28,12 @@
     <input type="text" id="regusername" ng-model="reg.username" placeholder="username"/>
     <input type="email" id="regemail" ng-model="reg.email" placeholder=" email address"/>
     <input type="password" id="regpassword" ng-model="reg.password" placeholder=" password"/>
-    <button class="waves-effect waves-light btn-large indigo accent-2">Register</button>
+    <button class="waves-effect waves-light btn-large #1EC0B9">Register</button>
     <!-- <div class="facebookRegister">
       <button class="waves-effect waves-light btn-large indigo accent-2">Register With Facebook</button>
     </div> -->
   </form>
 
+</div>
 </div>
 </div>

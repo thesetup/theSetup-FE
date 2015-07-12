@@ -1,9 +1,8 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Setup</a>
+      <a href="/#/" class="brand-logo center"><img src="images/setup_logo.png" height="56" width="auto"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/#/">Home</a></li>
         <li><a ng-click="gotoCreate()">Create Profile for Friend</a></li>
         <li><a ng-click="gotoSearch()">Search</a></li>
         <li><a ng-click="logoutUser()">Logout</a></li>
@@ -14,20 +13,19 @@
 
 <div class="container">
 <div class="createDiv">
+<div class="row">
 
 <h2 class="brand-logo center">Create a Profile for your Friend</h2>
 
 <div class="createTopText">
-<h5>You can create a profile in 4 easy steps using the web app or the mobile app</h5>
+<h5>You can create a profile in 3 easy steps using the web app or the mobile app</h5>
 <small>Please note you will be required to submit a video for this profile. You can create a video using the mobile app or you can upload a youtube link.</small>
 
-<div class="profileQuestions">
-<h2 id="questionsText" class="brand-logo center">Profile Questions</h2>
 
-<!-- <form ng-submit="createProfile(profile)">
-  <input type="text" ng-model="profile.name">
-  <button>Submit</button>
-</form> -->
+<div class="profileQuestions">
+<h2 id="questionsText" class="brand-logo center">Step 1: Questions</h2>
+
+
 
 <form ng-submit="createProfile(profile)">
 <ul>
@@ -70,8 +68,21 @@
 </form>
 </div> <!-- end of profileQuestions -->
 
+
+<div class="videoDiv">
+<h2 id="videoHeader" class="brand-logo center">Step 2: Videos</h2>
+<input type="url" ng-model="profile.mainVid" placeholder="Main Video Link *2 min max">
+<input type="url" ng-model="profile.hobbies_vid" placeholder="Optional Video Link about Hobbies *30 sec max">
+<input type="url" ng-model="profile.tastes_vid" placeholder="Optional Video Link about Tastes *30 sec max">
+<input type="url" ng-model="profile.looking_for_vid" placeholder="Optional Video Link about the type of person best suited for your friend *1 min max">
+<p>Think of this as a documentary about your friend. The main video is a video of you (and others) describing your friend. You can include footage of your friend. The more entertaining, the better! Maximum video length is 2 minutes. You can quickly create videos using our mobile app.</p>
+</div> <!-- end of videoDiv -->
+
+
+
+
 <div class="picturesDiv">
-<h2 id="picturesText" class="brand-logo center">Profile Pictures</h2>
+<h2 id="picturesText" class="brand-logo center">Step 3: Pictures</h2>
 
     <div class="file-field input-field">
       <input class="file-path validate" type="text"/>
@@ -129,17 +140,11 @@
 
 </div> <!-- end of PicturesDiv -->
 
-<div class="videoDiv">
-<h2 id="videoHeader" class="brand-logo center">Profile Videos</h2>
-<input type="url" ng-model="profile.mainVid" placeholder="Main Video Link *2 min max">
-<input type="url" ng-model="profile.hobbies_vid" placeholder="Optional Video Link about Hobbies *30 sec max">
-<input type="url" ng-model="profile.tastes_vid" placeholder="Optional Video Link about Tastes *30 sec max">
-<input type="url" ng-model="profile.looking_for_vid" placeholder="Optional Video Link about the type of person best suited for your friend *1 min max">
-<p>Think of this as a documentary about your friend. The main video is a video of you (and others) describing your friend. You can include footage of your friend. The more entertaining, the better! Maximum video length is 2 minutes. You can quickly create videos using our mobile app. <button class="waves-effect waves-light btn-large indigo accent-2">download mobile app</button></p>
-</div> <!-- end of videoDiv -->
+
 <button>Submit</button>
 </form><!-- end of createProfile form -->
-
 </div>
+</div>
+
 </div>
 </div>
