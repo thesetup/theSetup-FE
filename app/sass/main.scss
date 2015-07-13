@@ -226,29 +226,35 @@ button:before {
   @include outer-container;
 
   .profileTop {
-    background-color: RGBA(30, 192, 185, 1);
+    //background-color: RGBA(30, 192, 185, 1);
     border-radius: 5px;
     position: relative;
+
+    img {
+      width: 40%;
+      //border: 1px solid $lightGray;
+      border-radius: 5px;
+    }
   }
 
   .profileTop:before {
     content: '\f1d8   apply for date';
     font-family: FontAwesome;
     position: absolute;
-    color: white;
-    font-size: 1.5em;
-    right: 15px;
-    top: 45px;
+    color: RGBA(30, 192, 185, 1);
+    font-size: 1em;
+    right: -15px;
+    top: -60px;
   }
 
   .profileTop:after {
     content: '\f004   mark as favorite';
     font-family: FontAwesome;
     position: absolute;
-    color: white;
-    font-size: 1.5em;
-    right: 15px;
-    top: 10px;
+    color: RGBA(30, 192, 185, 1);
+    font-size: 1em;
+    right: 125px;
+    top: -60px;
   }
 
   .video-container {
@@ -258,13 +264,9 @@ button:before {
 
   .optionalVidsDiv {
 
-
-
     .video {
       @include span-columns(3);
       width: 30%;
-
-
 
       iframe {
         height: 200px;
@@ -278,16 +280,22 @@ button:before {
   }
 
   .row {
-    background-color: $indigo;
+    border: 2px solid $lightGray;
+    //background-color: RGBA(21, 141, 162, 0.8);
+    //background-color: $lightGray;
     padding: 25px;
     border-radius: 5px;
     margin-top: 25px;
 
     img {
-      margin-left: 10px;
+      margin-left: 15px;
       margin-top: 10px;
       margin-bottom: 10px;
     }
+  }
+
+  .row:hover {
+    background-color: $lightGray;
   }
 
   h2 {
@@ -306,14 +314,30 @@ button:before {
 
 
 .topRight {
-  @include span-columns(4);
-  border: 1px solid $gray;
+  border: 2px solid $lightGray;
   border-radius: 5px;
   color: $gray;
+  font-size: 1.3em;
+  // font-family: $italic;
   padding: 25px;
-  width: 40%;
+  width: 50%;
+  height: 346px;
+  margin-right: 25px;
+  margin-top: 10px;
   background-color: white;
   float: right;
+
+    p {
+      color: $darkGray;
+    }
+
+    span {
+      width: 25px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: RGBA(30, 192, 185, 1);
+      color: white;
+    }
 
   .colorTop {
     height: 30px;
