@@ -89,18 +89,13 @@
           templateUrl: 'js/templates/searchmain.tpl.html',
           controller: 'SearchController'
         })
-        .state('searchresults', {
-          url: '/search/results',
-          templateUrl: 'js/templates/searchresults.tpl.html',
-          controller: 'SearchController'
-        })
         .state('createprofile', {
           url: '/create',
           templateUrl: 'js/templates/create.tpl.html',
           controller: 'ProfileController'
         })
         .state('singleprofile', {
-          url: '/single',
+          url: '/single/:id',
           templateUrl: 'js/templates/singleprofile.tpl.html',
           controller: 'ProfileController'
         });

@@ -75,7 +75,6 @@
       var access_token = $cookies.get('access_token');
       var user = access_token !== undefined;
       API.CONFIG.headers['Access-Token'] = access_token;
-      console.log(API.CONFIG.headers);
       if (!user && !$state.includes('login')) {
         $state.go('home');
       }

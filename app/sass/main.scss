@@ -3,6 +3,7 @@
 
 //////////colors//////////////
 $indigo: RGBA(21, 141, 162, 1);
+$lightIndigo: RGBA(30, 192, 185, 1);
 $gray: #727D8C;
 $darkGray: #272822;
 $lightGray: #bdbdbd;
@@ -161,6 +162,46 @@ button:before {
   }
 }
 
+////////////////////////////////////////////////////////
+////////// Search Results ///////
+///////////////////////////////////////////////////////
+
+.searchResults ul li {
+    background-color: white;
+    border: 1px solid $indigo;
+    border-radius: 5px;
+    width: 30%;
+    height: 200px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+  span {
+    color: $gray;
+    display: block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+  .colorTopFemale {
+    height: 25px;
+    background-color: $lightIndigo;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+
+  .colorTopMale {
+    height: 25px;
+    background-color: $indigo;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
 
 /////////////////////////////////////////////////////
 /////////// Create Div ////////////

@@ -48,7 +48,7 @@
     this.getSingleProfile = function (profile) {
       $http.get({
         method: 'GET',
-        url: API.URL + '/profiles/:profile_id',
+        url: API.URL + '/profiles/:id',
         headers: API.CONFIG.headers,
         params: profile
       })
@@ -88,6 +88,9 @@
 
       });
     };
+
+
+
 
   }]);
 

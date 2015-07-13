@@ -119,6 +119,36 @@ button:before {
   display: inline-block;
   margin-right: 100px; }
 
+.searchResults ul li {
+  background-color: white;
+  border: 1px solid RGBA(21, 141, 162, 1);
+  border-radius: 5px;
+  width: 30%;
+  height: 200px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer; }
+  .searchResults ul li span {
+    color: #727D8C;
+    display: block; }
+  .searchResults ul li a {
+    text-decoration: none; }
+
+.colorTopFemale {
+  height: 25px;
+  background-color: RGBA(30, 192, 185, 1);
+  border-radius: 5px;
+  margin-bottom: 5px; }
+
+.colorTopMale {
+  height: 25px;
+  background-color: RGBA(21, 141, 162, 1);
+  border-radius: 5px;
+  margin-bottom: 5px; }
+
 .createDiv {
   color: #727D8C; }
   .createDiv h2 {

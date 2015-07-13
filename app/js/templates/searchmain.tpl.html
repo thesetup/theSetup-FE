@@ -17,7 +17,7 @@
 
 
 
-<form ng-submit="">
+<form ng-submit="search()">
 <ul class="searchList">
 
   <label>Minimum Age</label>
@@ -51,7 +51,28 @@
   </li>
 
 </ul>
-</form>
 <button class="waves-effect waves-light btn-large">Search</button>
+</form>
+
+<div class="searchResults">
+
+<ul>
+<li ng-repeat="s in searchdata.questions">
+<a href="/#/single/{{ s.id }}">
+
+<div class="colorTopMale"></div>
+
+ <span>Name: {{ s.name }}</span>
+ <span>Gender: {{ s.gender}}</span>
+ <span>Location: {{ s.location }}</span>
+ <span>Year Born: {{ s.birthyear }}</span>
+ <span>Orientation: {{ s.orientation }}</span>
+ <span>Occupation: {{ s.occupation }}</span>
+
+</a>
+</li>
+</ul>
+
+</div>
 </div>
 </div>
