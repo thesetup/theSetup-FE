@@ -228,6 +228,27 @@ button:before {
   .profileTop {
     background-color: RGBA(30, 192, 185, 1);
     border-radius: 5px;
+    position: relative;
+  }
+
+  .profileTop:before {
+    content: '\f1d8   apply for date';
+    font-family: FontAwesome;
+    position: absolute;
+    color: white;
+    font-size: 1.5em;
+    right: 15px;
+    top: 45px;
+  }
+
+  .profileTop:after {
+    content: '\f004   mark as favorite';
+    font-family: FontAwesome;
+    position: absolute;
+    color: white;
+    font-size: 1.5em;
+    right: 15px;
+    top: 10px;
   }
 
   .video-container {

@@ -4,7 +4,7 @@
 
   angular.module('Profile')
 
-  .controller('ProfileController', ['$scope', '$state', 'ProfileService', function ($scope, $state, ProfileService) {
+  .controller('ProfileController', ['$scope', '$state', 'ProfileService', 'UserService', function ($scope, $state, ProfileService, UserService) {
 
    $scope.uploadImages = function () {
     ProfileService.imageUpload();
@@ -17,10 +17,6 @@
 
     $scope.showSingle = function (profile) {
       ProfileService.getSingleProfile(profile);
-    };
-
-    $scope.gotoHome = function () {
-      $state.go('home');
     };
 
     $scope.gotoSearch = function (){
