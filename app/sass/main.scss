@@ -84,6 +84,12 @@ button:before {
     content: '\f007';
     left: -25px;
   }
+
+  span {
+    color: $gray;
+    font-size: 16px;
+    cursor: pointer;
+  }
 }
 
 

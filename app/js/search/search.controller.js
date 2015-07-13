@@ -11,9 +11,7 @@
     $scope.search = function() {
       SearchService.goSearch()
       .then(function (data) {
-        console.log(data);
         $scope.searchdata = data.data;
-        console.log($scope.searchdata);
       });
     };
 

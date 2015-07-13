@@ -34,13 +34,8 @@
     };
 
     SearchService.goSearch().success( function (data) {
-      console.log(data.questions);
-      console.log($stateParams.id);
       var singleID = Number($stateParams.id);
-      console.log(singleID);
       $scope.result = _.findWhere(data.questions, {profile_id: singleID});
-
-      console.log($scope.result);
     });
 
 

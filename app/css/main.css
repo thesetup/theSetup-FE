@@ -56,6 +56,10 @@ button:before {
     color: white;
     content: '\f007';
     left: -25px; }
+  .profileMgmt span {
+    color: #727D8C;
+    font-size: 16px;
+    cursor: pointer; }
 
 .applicationMgmt {
   float: left;

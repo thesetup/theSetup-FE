@@ -24,9 +24,7 @@
           url: '/',
           templateUrl: 'js/templates/home.tpl.html',
           controller: function ($scope, $state, UserService) {
-            console.log('in home state controller');
             if(UserService.isLoggedIn()){
-              console.log('heyo!');
               $state.go('home.loggedin');
             }else{
               setTimeout( function () {

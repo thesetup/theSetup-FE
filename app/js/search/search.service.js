@@ -11,6 +11,7 @@
         method: 'GET',
         url: API.URL + '/profiles',
         headers: API.CONFIG.headers
+
       });
     };
 

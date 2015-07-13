@@ -4,9 +4,23 @@
 
   angular.module('User')
 
-  .controller('DashboardController', ['$scope', '$cookies', '$http', '$state', 'UserService', 'ProfileService', function ($scope, $cookies, $http, $state, UserService, ProfileService) {
+  .controller('DashboardController', ['API','$scope', '$cookies', '$http', '$state', 'UserService', 'ProfileService', 'SearchService', function (API, $scope, $cookies, $http, $state, UserService, ProfileService, SearchService) {
+
+    UserService.checkLogin();
 
     $scope.user = $cookies.getObject('currentUser');
+
+    SearchService.goSearch().success( function (data) {
+      var dashprofiles = _.where(data.profiles, {profiler_id: $scope.user.id});
+      _.each(dashprofiles, function(profile){
+        var q = _.find(data.questions, function(question){
+          return question.profile_id === profile.id;
+        });
+        profile.name = q.name;
+      });
+      $scope.dashprofiles = dashprofiles;
+    });
+
 
   }]);
 

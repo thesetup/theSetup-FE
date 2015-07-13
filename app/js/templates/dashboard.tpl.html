@@ -10,19 +10,13 @@
   <div class="profileMgmt">
   <h5>Profile Management</h5>
   <ul>
-  <li>Billy Bob</li>
-  <li>Turd Ferguson</li>
-  <li>Turd Ferguson</li>
-  <li>Turd Ferguson</li>
-  <li>Turd Ferguson</li>
-  <li>Turd Ferguson</li>
-  <li>Turd Ferguson</li>
-  <li>Turd Ferguson</li>
-  <li>Turd Ferguson</li>
-  <li>Turd Ferguson</li>
-  <li>Turd Ferguson</li>
+    <li ng-repeat="d in dashprofiles">
 
-</ul>
+      <a href="/#/single/{{ d.id }}">
+      <span>{{ d.name }}</span>
+      </a>
+    </li>
+  </ul>
   </div>
 </div>
 
