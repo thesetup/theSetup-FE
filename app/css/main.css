@@ -42,11 +42,20 @@ button:before {
   border-radius: 5px;
   height: 200px;
   margin: 15px auto;
-  padding: 15px; }
+  padding: 15px;
+  overflow: scroll; }
   .profileMgmt:last-child {
     margin-right: 0; }
   .profileMgmt h5 {
-    color: white; }
+    color: white;
+    position: relative;
+    margin-left: 25px; }
+  .profileMgmt h5:before {
+    position: absolute;
+    font-family: FontAwesome;
+    color: white;
+    content: '\f007';
+    left: -25px; }
 
 .applicationMgmt {
   float: left;
@@ -58,11 +67,20 @@ button:before {
   border-radius: 5px;
   height: 200px;
   margin: 15px auto;
-  padding: 15px; }
+  padding: 15px;
+  overflow: scroll; }
   .applicationMgmt:last-child {
     margin-right: 0; }
   .applicationMgmt h5 {
-    color: white; }
+    color: white;
+    position: relative;
+    margin-left: 28px; }
+  .applicationMgmt h5:before {
+    position: absolute;
+    font-family: FontAwesome;
+    color: white;
+    content: '\f1d8';
+    left: -28px; }
 
 .favorites {
   float: left;
@@ -74,11 +92,20 @@ button:before {
   border-radius: 5px;
   height: 200px;
   margin: 15px auto;
-  padding: 15px; }
+  padding: 15px;
+  overflow: scroll; }
   .favorites:last-child {
     margin-right: 0; }
   .favorites h5 {
-    color: white; }
+    color: white;
+    position: relative;
+    margin-left: 28px; }
+  .favorites h5:before {
+    position: absolute;
+    font-family: FontAwesome;
+    color: white;
+    content: '\f004';
+    left: -28px; }
 
 .searchDiv ul select {
   width: 150px;

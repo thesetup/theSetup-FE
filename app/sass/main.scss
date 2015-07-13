@@ -69,8 +69,19 @@ button:before {
   height: 200px;
   margin: 15px auto;
   padding: 15px;
+  overflow: scroll;
   h5 {
     color: white;
+    position: relative;
+    margin-left: 25px;
+  }
+
+  h5:before {
+    position: absolute;
+    font-family: FontAwesome;
+    color: white;
+    content: '\f007';
+    left: -25px;
   }
 }
 
@@ -83,8 +94,19 @@ button:before {
   height: 200px;
   margin: 15px auto;
   padding: 15px;
+  overflow: scroll;
   h5 {
     color: white;
+    position: relative;
+    margin-left: 28px;
+  }
+
+  h5:before {
+    position: absolute;
+    font-family: FontAwesome;
+    color: white;
+    content: '\f1d8';
+    left: -28px;
   }
 }
 
@@ -99,9 +121,20 @@ button:before {
   height: 200px;
   margin: 15px auto;
   padding: 15px;
+  overflow: scroll;
   h5 {
       color: white;
+      position: relative;
+      margin-left: 28px;
     }
+
+   h5:before {
+    position: absolute;
+    font-family: FontAwesome;
+    color: white;
+    content: '\f004';
+    left: -28px;
+  }
   }
 
 
