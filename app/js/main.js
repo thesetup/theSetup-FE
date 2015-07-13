@@ -100,7 +100,7 @@
           controller: 'ProfileController'
         })
         .state('singleprofile', {
-          url: 'profiles/:profile_id',
+          url: '/single',
           templateUrl: 'js/templates/singleprofile.tpl.html',
           controller: 'ProfileController'
         });

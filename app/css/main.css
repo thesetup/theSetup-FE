@@ -144,12 +144,68 @@ button:before {
   .videoDiv p {
     text-align: center; }
 
-.reviewDiv #reviewHeader {
-  color: white;
-  background-color: RGBA(29, 187, 162, 0.5); }
+.singleProfileDiv {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .singleProfileDiv::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .singleProfileDiv .profileTop {
+    background-color: RGBA(30, 192, 185, 1);
+    border-radius: 5px; }
+  .singleProfileDiv .video-container {
+    width: 60%;
+    margin: 0 auto; }
+  .singleProfileDiv .optionalVidsDiv .video {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    width: 30%; }
+    .singleProfileDiv .optionalVidsDiv .video:last-child {
+      margin-right: 0; }
+    .singleProfileDiv .optionalVidsDiv .video iframe {
+      height: 200px; }
+  .singleProfileDiv .optionalPicsDiv ul li {
+    display: inline-block; }
+  .singleProfileDiv .row {
+    background-color: RGBA(21, 141, 162, 1);
+    padding: 25px;
+    border-radius: 5px;
+    margin-top: 25px; }
+    .singleProfileDiv .row img {
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+  .singleProfileDiv h2 {
+    color: RGBA(21, 141, 162, 1);
+    position: relative; }
+  .singleProfileDiv h5 {
+    color: #727D8C;
+    position: absolute;
+    left: 360px;
+    top: 130px; }
 
-.reviewDiv p {
-  text-align: center; }
+.topRight {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  border: 1px solid #727D8C;
+  border-radius: 5px;
+  color: #727D8C;
+  padding: 25px;
+  width: 40%;
+  background-color: white;
+  float: right; }
+  .topRight:last-child {
+    margin-right: 0; }
+  .topRight .colorTop {
+    height: 30px;
+    background-color: RGBA(30, 192, 185, 1);
+    border-radius: 5px; }
 
 .aboutDiv h2 {
   color: RGBA(30, 192, 185, 1); }

@@ -216,20 +216,90 @@ button:before {
   }
 }
 
-.reviewDiv {
 
-  #reviewHeader {
-    color: white;
-    background-color: RGBA(29, 187, 162, 0.5);
 
+//////////////////////////////////////////////////////////
+///////////// Single Profile Page ///////
+////////////////////////////////////////////////////////////
+
+.singleProfileDiv {
+  @include outer-container;
+
+  .profileTop {
+    background-color: RGBA(30, 192, 185, 1);
+    border-radius: 5px;
   }
 
-  p {
-    text-align: center;
+  .video-container {
+    width: 60%;
+    margin: 0 auto;
   }
+
+  .optionalVidsDiv {
+
+
+
+    .video {
+      @include span-columns(3);
+      width: 30%;
+
+
+
+      iframe {
+        height: 200px;
+
+      }
+    }
+  }
+
+  .optionalPicsDiv ul li {
+    display: inline-block;
+  }
+
+  .row {
+    background-color: $indigo;
+    padding: 25px;
+    border-radius: 5px;
+    margin-top: 25px;
+
+    img {
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  h2 {
+    color: $indigo;
+    position: relative;
+  }
+
+  h5 {
+    color: $gray;
+    position: absolute;
+    left: 360px;
+    top: 130px;
+  }
+
 }
 
 
+.topRight {
+  @include span-columns(4);
+  border: 1px solid $gray;
+  border-radius: 5px;
+  color: $gray;
+  padding: 25px;
+  width: 40%;
+  background-color: white;
+  float: right;
+
+  .colorTop {
+    height: 30px;
+    background-color: RGBA(30, 192, 185, 1);
+    border-radius: 5px;
+  }
+}
 
 
 /////////////////////////////////////////////////////

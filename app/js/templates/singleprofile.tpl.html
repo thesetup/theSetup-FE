@@ -1,9 +1,8 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">The Setup</a>
+       <a href="/#/" class="brand-logo center"><img src="images/setup_logo.png" height="56" width="auto"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a ng-click="gotoHome()">Home</a></li>
         <li><a ng-click="gotoCreate()">Create Profile for Friend</a></li>
         <li><a ng-click="gotoSearch()">Search</a></li>
         <li><a ng-click="logoutUser()">Logout</a></li>
@@ -12,27 +11,61 @@
   </nav>
 </div>
 
-<h2>This is the Single Profile page</h2>
+<div class="container">
+<div class="singleProfileDiv">
 
- <h2>{{ profile.first_name}}'s Profile</h2> <img src="{{ profile.mainPic }}"/>
- <h5>Created by: {{ profile.profiler.user_id }}</h5>
- <div class="singleProfileInfo">
-   {{ profile.gender }}
-   {{ profile.birthYear }}
-   {{ profile.location }}
-   {{ profile.orientation }}
-   {{ profile.occupation }}
+ <h2>Stina's Profile</h2>
+ <h5>created by: jamiegmoney</h5>
+
+<div class="row">
+<div class="profileTop">
+ <img src="images/stina.jpg" width="300" height="auto" style="border-radius:50%"/>
+ </div>
+</div>
+
+<div class="row">
+ <div class="topRight">
+ <div class="colorTop"></div>
+   <p>Gender: Female</p>
+   <p>Age: 33</p>
+   <p>Location: Boise, Idaho</p>
+   <p>Orientation: Straight</p>
+   <p>Occupation: Insurance Contracts Negotiator</p>
+ </div>
  </div>
 
- <div class="singleProfileVideosDiv">
 
-   {{ profile.mainVid }}
+<div class="row">
+ <div class="singleProfileVideoDiv">
+ <div class="video-container">
+ <iframe src="https://www.youtube.com/embed/LmBM20ZN010?rel=0" frameborder="0" allowfullscreen></iframe>
+ </div>
+ </div>
  </div>
 
- <div class="singleProfileOptionalVidsDiv">
-   {{ profile.hobbies_vid }}
-   {{ profile.tastes_vid }}
-   {{ profile.looking_for_vid }}
+<div class="row">
+ <div class="optionalVidsDiv">
+ <div class="video"><iframe src="https://www.youtube.com/embed/-CmadmM5cOk?rel=0" frameborder="0" allowfullscreen></iframe><span></div>
+ <div class="video"><iframe src="https://www.youtube.com/embed/e-ORhEE9VVg?rel=0" frameborder="0" allowfullscreen></iframe></div>
+ <div class="video"><iframe src="https://www.youtube.com/embed/nfWlot6h_JM?rel=0" frameborder="0" allowfullscreen></iframe></div>
+
  </div>
+</div>
 
 
+<div class="row">
+  <div class="optionalPicsDiv">
+  <ul>
+    <li><img src="images/stina_1.jpg" width="150"></li>
+    <li><img src="images/stina_2.jpg" width="150"></li>
+    <li><img src="images/stina_3.jpg" width="150"></li>
+    <li><img src="images/stina_4.jpg" width="150"></li>
+    <li><img src="images/stina_5.jpg" width="150"></li>
+
+  </ul>
+
+  </div>
+</div>
+
+</div>
+</div>
