@@ -16,7 +16,8 @@
 
     var _updateConfig = function (user) {
       API.CONFIG.headers['Access-Token'] = user.access_token;
-      $state.go('home');
+      //$state.go('home');
+      console.log(API.CONFIG.headers);
     };
 
 
@@ -71,7 +72,10 @@
     };
 
     this.checkLogin = function () {
-      var user = $cookies.get('access_token') !== undefined;
+      var access_token = $cookies.get('access_token');
+      var user = access_token !== undefined;
+      API.CONFIG.headers['Access-Token'] = access_token;
+      console.log(API.CONFIG.headers);
       if (!user && !$state.includes('login')) {
         $state.go('home');
       }

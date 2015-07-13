@@ -4,16 +4,17 @@
 
   angular.module('Profile')
 
-  .service('ProfileService', ['API', '$rootScope','$state', '$http', function (API, $rootScope, $state, $http) {
+  .service('ProfileService', ['API', '$cookies', '$rootScope','$state', '$http', function (API, $cookies, $rootScope, $state, $http) {
 
     var Profile = function (options) {
-      this.first_name = options.first_name;
+      this.username = options.username;
       this.email = options.email;
+      this.password = options.password;
       this.gender = options.gender;
       this.occupation = options.occupation;
       this.orientation = options.orientation;
       this.location = options.location;
-      this.birthYear = options.birthYear;
+      this.birthyear = options.birthyear;
       this.mainVid = options.mainVid;
       this.hobbies_vid = options.hobbies_vid;
       this.tastes_vid = options.tastes_vid;
@@ -27,10 +28,13 @@
     this.profileCreation = function (profile) {
       console.log('inside profileCreation!');
       var p = new Profile(profile);
+      var url = API.URL + '/profiles';
+      console.log(API.CONFIG.headers);
+      console.log(url);
       console.log(p);
-      $http.post({
+      $http({
         method: 'POST',
-        url: API.URL + '/profiles',
+        url: url,
         headers: API.CONFIG.headers,
         params: p
       })
