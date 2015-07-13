@@ -337,7 +337,7 @@ button:before {
   }
 
   h5 {
-    color: $gray;
+    color: RGBA(30, 192, 185, 1);
     position: absolute;
     left: 360px;
     top: 130px;
@@ -372,11 +372,11 @@ button:before {
       color: white;
     }
 
-  .colorTop {
-    height: 30px;
-    background-color: RGBA(30, 192, 185, 1);
-    border-radius: 5px;
-  }
+  // .colorTop {
+  //   height: 30px;
+  //   background-color: RGBA(30, 192, 185, 1);
+  //   border-radius: 5px;
+  // }
 }
 
 
@@ -526,5 +526,14 @@ button:before {
 ////////// Footer /////////////////
 //////////////////////////////////////////////////////
 
+// footer {
+//   background-color: $lightGray;
+
+//     clear: both;
+//     position: relative;
+//     //z-index: 10;
+//     height: 3em;
+//     margin-top: 1em;
+// }
 
 

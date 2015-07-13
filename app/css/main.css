@@ -231,7 +231,7 @@ button:before {
     color: RGBA(21, 141, 162, 1);
     position: relative; }
   .singleProfileDiv h5 {
-    color: #727D8C;
+    color: RGBA(30, 192, 185, 1);
     position: absolute;
     left: 360px;
     top: 130px; }
@@ -256,10 +256,6 @@ button:before {
     border-radius: 5px;
     background-color: RGBA(30, 192, 185, 1);
     color: white; }
-  .topRight .colorTop {
-    height: 30px;
-    background-color: RGBA(30, 192, 185, 1);
-    border-radius: 5px; }
 
 .aboutDiv h2 {
   color: RGBA(30, 192, 185, 1); }
