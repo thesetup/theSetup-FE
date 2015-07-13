@@ -14,8 +14,8 @@
 <div class="container">
 <div class="singleProfileDiv">
 
- <h2>Stina's Profile</h2>
- <h5>created by: jamiegmoney</h5>
+ <h2>{{result.name}}'s Profile</h2>
+ <h5>created by: {{user.username}}</h5>
 
 <div class="row">
 <div class="profileTop">
@@ -26,11 +26,11 @@
 
  <div class="topRight">
  <div class="colorTop"></div>
-   <p><span>Gender:</span> Female</p>
+   <p><span>Gender:</span> {{result.gender}}</p>
    <p><span>Age:</span> 33</p>
-   <p><span>Location:</span> Boise, Idaho</p>
-   <p><span>Orientation:</span> Straight</p>
-   <p><span>Occupation:</span> Insurance Contracts Negotiator</p>
+   <p><span>Location:</span> {{result.location}}</p>
+   <p><span>Orientation:</span> {{result.orientation}}</p>
+   <p><span>Occupation:</span> {{result.occupation}}</p>
  </div>
 </div>
 </div>

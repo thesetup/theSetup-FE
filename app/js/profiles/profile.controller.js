@@ -4,7 +4,9 @@
 
   angular.module('Profile')
 
-  .controller('ProfileController', ['$scope', '$state', 'ProfileService', 'UserService', 'SearchService', '$stateParams', function ($scope, $state, ProfileService, UserService, SearchService, $stateParams) {
+  .controller('ProfileController', ['$cookies', '$scope', '$state', 'ProfileService', 'UserService', 'SearchService', '$stateParams', function ($cookies, $scope, $state, ProfileService, UserService, SearchService, $stateParams) {
+
+    $scope.user = $cookies.getObject('currentUser');
 
     $scope.uploadImages = function () {
       ProfileService.imageUpload();
@@ -32,9 +34,12 @@
     };
 
     SearchService.goSearch().success( function (data) {
+      console.log(data.questions);
       console.log($stateParams.id);
-      var singleID = $stateParams.id;
-      $scope.result = _.findWhere(data, {id: singleID});
+      var singleID = Number($stateParams.id);
+      console.log(singleID);
+      $scope.result = _.findWhere(data.questions, {profile_id: singleID});
+
       console.log($scope.result);
     });
 
