@@ -27,7 +27,7 @@
  <div class="topRight">
  <div class="colorTop"></div>
    <p><span>Gender:</span> {{result.gender}}</p>
-   <p><span>Age:</span> 33</p>
+   <p><span>Age:</span> {{ result.age }}</p>
    <p><span>Location:</span> {{result.location}}</p>
    <p><span>Orientation:</span> {{result.orientation}}</p>
    <p><span>Occupation:</span> {{result.occupation}}</p>
@@ -35,19 +35,20 @@
 </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
  <div class="singleProfileVideoDiv">
  <div class="video-container">
- <iframe src="https://www.youtube.com/embed/LmBM20ZN010?rel=0" frameborder="0" allowfullscreen></iframe>
+
+ <iframe class="youtube-player" width="640" height="385" ng-src="{{ trustSrc(embed_url) }}" allowfullscreen frameborder="0">
  </div>
  </div>
- </div>
+ </div> -->
 
 <div class="row">
  <div class="optionalVidsDiv">
- <div class="video"><iframe src="https://www.youtube.com/embed/-CmadmM5cOk?rel=0" frameborder="0" allowfullscreen></iframe><span></div>
- <div class="video"><iframe src="https://www.youtube.com/embed/e-ORhEE9VVg?rel=0" frameborder="0" allowfullscreen></iframe></div>
- <div class="video"><iframe src="https://www.youtube.com/embed/nfWlot6h_JM?rel=0" frameborder="0" allowfullscreen></iframe></div>
+ <div class="video"><span>Video goes here!</span></div>
+ <div class="video"><span>Video goes here!</span></div>
+ <div class="video"><span>Video goes here!</span></div>
 
  </div>
 </div>

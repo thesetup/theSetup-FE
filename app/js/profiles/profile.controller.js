@@ -4,7 +4,11 @@
 
   angular.module('Profile')
 
-  .controller('ProfileController', ['$cookies', '$scope', '$state', 'ProfileService', 'UserService', 'SearchService', '$stateParams', function ($cookies, $scope, $state, ProfileService, UserService, SearchService, $stateParams) {
+  .controller('ProfileController', ['$cookies', '$scope', '$state', 'ProfileService', 'UserService', 'SearchService', '$stateParams', '$sce', function ($cookies, $scope, $state, ProfileService, UserService, SearchService, $stateParams, $sce) {
+
+    $scope.trustSrc = function(src) {
+      return $sce.trustAsResourceUrl(src);
+    };
 
     $scope.user = $cookies.getObject('currentUser');
 
@@ -35,8 +39,22 @@
 
     SearchService.goSearch().success( function (data) {
       var singleID = Number($stateParams.id);
-      $scope.result = _.findWhere(data.questions, {profile_id: singleID});
+      var result = _.findWhere(data.questions, {profile_id: singleID});
+      var vids = _.find(data.videos, {videoable_id: singleID});
+
+      $scope.result = result;
+      $scope.vids = vids;
+
+      var currYear = new Date().getFullYear();
+      $scope.result.age = currYear - result.birthyear;
+
+
+
     });
+
+    $scope.uploadVideo = function (profile) {
+      ProfileService.submitVideo(profile);
+    };
 
 
   }]);

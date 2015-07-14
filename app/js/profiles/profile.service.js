@@ -15,23 +15,19 @@
       this.orientation = options.orientation;
       this.location = options.location;
       this.birthyear = options.birthyear;
-      this.mainVid = options.mainVid;
-      this.hobbies_vid = options.hobbies_vid;
-      this.tastes_vid = options.tastes_vid;
-      this.looking_for_vid = options.looking_for_vid;
     };
 
     var _profileSuccess = function (data) {
-      $state.go('singleprofile');
+      $cookies.put('currentprofileID', data.profile_id);
+    };
+
+    var _imageSuccess = function () {
+      $cookies.remove('currentprofileID');
     };
 
     this.profileCreation = function (profile) {
-      console.log('inside profileCreation!');
       var p = new Profile(profile);
       var url = API.URL + '/profiles';
-      console.log(API.CONFIG.headers);
-      console.log(url);
-      console.log(p);
       $http({
         method: 'POST',
         url: url,

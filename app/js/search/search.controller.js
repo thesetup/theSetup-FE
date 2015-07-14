@@ -12,6 +12,8 @@
       SearchService.goSearch()
       .then(function (data) {
         $scope.searchdata = data.data;
+        var currYear = new Date().getFullYear();
+
       });
     };
 
