@@ -128,7 +128,7 @@ button:before {
   border: 1px solid RGBA(21, 141, 162, 1);
   border-radius: 5px;
   width: 30%;
-  height: 200px;
+  height: 300px;
   padding: 10px;
   margin-left: 10px;
   margin-right: 10px;
@@ -152,6 +152,9 @@ button:before {
   background-color: RGBA(21, 141, 162, 1);
   border-radius: 5px;
   margin-bottom: 5px; }
+
+.searchResultImage {
+  margin-left: 30%; }
 
 .createDiv {
   color: #727D8C; }

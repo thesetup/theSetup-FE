@@ -4,7 +4,7 @@
 
   angular.module('Profile')
 
-  .controller('SearchController', ['$rootScope', '$scope', 'SearchService', 'UserService', 'ProfileService', function ($rootScope, $scope, SearchService, UserService, ProfileService) {
+  .controller('SearchController', ['$rootScope', '$state', '$scope', 'SearchService', 'UserService', 'ProfileService', function ($rootScope, $state, $scope, SearchService, UserService, ProfileService) {
 
     $scope.searchdata = [];
 
@@ -28,6 +28,10 @@
     var input = [];
     for (var i = min; i <= max; i += step) input.push(i);
     return input;
+    };
+
+    $scope.takemetoSearch = function () {
+      $state.go('search');
     };
 
 

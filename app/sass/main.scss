@@ -177,7 +177,7 @@ button:before {
     border: 1px solid $indigo;
     border-radius: 5px;
     width: 30%;
-    height: 200px;
+    height: 300px;
     padding: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -207,6 +207,10 @@ button:before {
     background-color: $indigo;
     border-radius: 5px;
     margin-bottom: 5px;
+  }
+
+  .searchResultImage {
+    margin-left: 30%;
   }
 
 /////////////////////////////////////////////////////

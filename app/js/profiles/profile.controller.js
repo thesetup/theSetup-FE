@@ -4,7 +4,7 @@
 
   angular.module('Profile')
 
-  .controller('ProfileController', ['$cookies', '$scope', '$state', 'ProfileService', 'UserService', 'SearchService', '$stateParams', '$sce', function ($cookies, $scope, $state, ProfileService, UserService, SearchService, $stateParams, $sce) {
+  .controller('ProfileController', ['$cookies', '$scope', '$state', 'ProfileService', 'UserService', 'SearchService', '$stateParams', function ($cookies, $scope, $state, ProfileService, UserService, SearchService, $stateParams) {
 
     $scope.trustSrc = function(src) {
       return $sce.trustAsResourceUrl(src);
@@ -46,7 +46,7 @@
       $scope.vids = vids;
 
       var currYear = new Date().getFullYear();
-      $scope.result.age = currYear - result.birthyear;
+      $scope.result.age = (currYear - result.birthyear);
 
 
 
