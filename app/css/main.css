@@ -28,6 +28,15 @@ button:before {
   background-color: white; }
 
 .personal {
+  position: relative;
+  overflow: hidden;
+  height: 50px;
+  transition: height 0.5s; }
+
+.personal:hover {
+  height: 300px; }
+
+.personalText {
   color: RGBA(21, 141, 162, 1);
   font-size: 2em;
   margin-left: 25px; }
