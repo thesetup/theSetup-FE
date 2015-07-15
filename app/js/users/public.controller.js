@@ -7,7 +7,7 @@
   .controller('PublicController', ['$scope', 'UserService', function ($scope, UserService) {
 
 
-
+     $('.slider').slider({ full_width: true });
 
   }]);
 

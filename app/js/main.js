@@ -63,6 +63,10 @@
               templateUrl: 'js/templates/homenotloggedin.tpl.html',
               controller: 'UserController'
             },
+            'slider' : {
+              templateUrl: 'js/templates/slider.tpl.html',
+              controller: 'PublicController'
+            },
             'aboutView' : {
               templateUrl: 'js/templates/about.tpl.html',
               controller: 'PublicController'
