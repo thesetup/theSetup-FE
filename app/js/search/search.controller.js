@@ -11,9 +11,15 @@
     $scope.search = function() {
       SearchService.goSearch()
       .then(function (data) {
-        $scope.searchdata = data.data;
+        var searchdata = data.data;
+        $scope.searchdata = searchdata;
         var currYear = new Date().getFullYear();
+        var foo = _.each(searchdata.questions, function(bar) {
+            var currAge = (currYear - bar.birthyear);
+            console.log(currAge);
+            bar.age = currAge;
 
+        });
       });
     };
 
