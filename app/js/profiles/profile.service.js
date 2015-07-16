@@ -56,11 +56,6 @@
 
     this.imageUpload = function () {
       var mainPic = document.getElementById('mainPhoto').files[0];
-      var optPic1 = document.getElementById('optPic1').files[1];
-      var optPic2 = document.getElementById('optPic2').files[2];
-      var optPic3 = document.getElementById('optPic3').files[3];
-      var optPic4 = document.getElementById('optPic4').files[4];
-      var optPic5 = document.getElementById('optPic5').files[5];
 
 
       var headers = {
@@ -68,11 +63,6 @@
       };
       var formData = new FormData();
       formData.append('file[image]', mainPic);
-      formData.append('file[image]', optPic1);
-      formData.append('file[image]', optPic2);
-      formData.append('file[image]', optPic3);
-      formData.append('file[image]', optPic4);
-      formData.append('file[image]', optPic5);
 
       console.log(formData);
 

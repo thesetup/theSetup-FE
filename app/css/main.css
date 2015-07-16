@@ -24,6 +24,12 @@ button:before {
     font-size: 3em;
     cursor: pointer; }
 
+.slider h3 {
+  color: RGBA(30, 192, 185, 1); }
+
+.slider h5 {
+  color: RGBA(30, 192, 185, 1); }
+
 .dashboardDiv {
   background-color: white; }
 
