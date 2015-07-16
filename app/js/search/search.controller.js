@@ -4,7 +4,7 @@
 
   angular.module('Profile')
 
-  .controller('SearchController', ['$rootScope', '$state', '$scope', 'SearchService', 'UserService', 'ProfileService', function ($rootScope, $state, $scope, SearchService, UserService, ProfileService) {
+  .controller('SearchController', ['API', '$rootScope', '$http', '$state', '$scope', 'SearchService', 'UserService', 'ProfileService', function (API, $rootScope, $http, $state, $scope, SearchService, UserService, ProfileService) {
 
     $scope.searchdata = [];
 
@@ -13,12 +13,19 @@
       .then(function (data) {
         var searchdata = data.data;
         $scope.searchdata = searchdata;
+        console.log(searchdata);
         var currYear = new Date().getFullYear();
         var foo = _.each(searchdata.questions, function(bar) {
             var currAge = (currYear - bar.birthyear);
-            console.log(currAge);
             bar.age = currAge;
+        });
 
+        var createdBy = _.each(searchdata.profiles, function (pizza) {
+          var profilerID = pizza.profiler_id;
+          console.log(profilerID);
+          $http.get(API.URL + '/users/' + profilerID);
+          $scope.created_by = pizza.username;
+          console.log($scope.created_by);
         });
       });
     };

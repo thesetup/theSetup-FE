@@ -41,15 +41,11 @@
     };
 
 
-    this.getSingleProfile = function (profile) {
-      $http.get({
+    this.getSingleProfile = function (pid) {
+      return $http({
         method: 'GET',
-        url: API.URL + '/profiles/:id',
-        headers: API.CONFIG.headers,
-        params: profile
-      })
-      .success (function (data) {
-        $state.reload();
+        url: API.URL + '/profiles/' + pid,
+        headers: API.CONFIG.headers
       });
     };
 
@@ -68,7 +64,7 @@
 
       $http({
         method: 'POST',
-        url: API.URL + '/profiles',
+        url: API.URL + '/profiles/',
         data: formData,
         headers: headers
 
