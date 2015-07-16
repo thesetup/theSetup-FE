@@ -14,8 +14,8 @@
 <div class="container">
 <div class="singleProfileDiv">
 
- <h2>{{result.name}}'s Profile</h2>
- <h5>created by: {{result.created_by}}</h5>
+ <h2>{{questions.name}}'s Profile</h2>
+ <h5>created by: {{creator}}</h5>
 
 <div class="row">
 <div class="profileTop">
@@ -26,11 +26,11 @@
 
  <div class="topRight">
  <div class="colorTop"></div>
-   <p><span>Gender:</span> {{result.gender}}</p>
-   <p><span>Age:</span> {{ result.age }}</p>
-   <p><span>Location:</span> {{result.location}}</p>
-   <p><span>Orientation:</span> {{result.orientation}}</p>
-   <p><span>Occupation:</span> {{result.occupation}}</p>
+   <p><span>Gender:</span> {{questions.gender}}</p>
+   <p><span>Age:</span> {{ questions.age }}</p>
+   <p><span>Location:</span> {{questions.location}}</p>
+   <p><span>Orientation:</span> {{questions.orientation}}</p>
+   <p><span>Occupation:</span> {{questions.occupation}}</p>
  </div>
 </div>
 </div>

@@ -18,7 +18,9 @@
     };
 
     var _profileSuccess = function (data) {
-      $cookies.put('currentprofileID', data.profile_id);
+      console.log(data.profiles);
+      $cookies.put('currentprofileID', data.profiles.profile_id);
+      console.log(data.profiles.profile_id);
     };
 
     var _imageSuccess = function () {
@@ -49,8 +51,18 @@
       });
     };
 
+    this.getCreator = function (cid) {
+      return $http({
+        method: 'GET',
+        url: API.URL + '/users/' + cid,
+        headers: API.CONFIG.headers
+      });
+    };
+
 
     this.imageUpload = function () {
+      var pid = $cookies.get('currentprofileID');
+      console.log(pid);
       var mainPic = document.getElementById('mainPhoto').files[0];
 
 
@@ -64,10 +76,12 @@
 
       $http({
         method: 'POST',
-        url: API.URL + '/profiles/',
+        url: API.URL + '/profiles/' + pid + '/images',
         data: formData,
         headers: headers
 
+      }).success(function (data) {
+        _imageSuccess(data);
       });
     };
 
