@@ -47,7 +47,7 @@
         _.each(videos, function(video) {
           console.log(video.video_url);
           var prof_video = video.video_url;
-          $scope.prof_video = $sce.trustAsUrl(prof_video);
+          $scope.prof_video = $sce.trustAsResourceUrl(prof_video);
         });
 
     ProfileService.getCreator(createdBy.profiler_id).then(function(data) {

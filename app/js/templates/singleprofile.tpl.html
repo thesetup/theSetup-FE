@@ -39,7 +39,12 @@
  <div class="singleProfileVideoDiv">
  <div class="video-container">
 
- <video width="640" height="385" src="{{ prof_video }}" controls></video>
+   <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264"
+      poster="http://video-js.zencoder.com/oceans-clip.png"
+      data-setup="{}">
+    <source src="{{ prof_video }}" type='video/mp4' />
+  </video>
+  <p>{{ prof_video }}</p>
  </div>
  </div>
  </div>
