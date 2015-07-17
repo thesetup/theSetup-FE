@@ -12,9 +12,10 @@
       SearchService.goSearch()
       .then(function (data) {
         var searchdata = data.data;
+        console.log(searchdata);
         $scope.searchdata = searchdata;
         var currYear = new Date().getFullYear();
-        var foo = _.each(searchdata.questions, function(bar) {
+        var foo = _.each(searchdata.question, function(bar) {
             var currAge = (currYear - bar.birthyear);
             bar.age = currAge;
         });

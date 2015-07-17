@@ -13,7 +13,7 @@
     SearchService.goSearch().success( function (data) {
       var dashprofiles = _.where(data.profiles, {profiler_id: $scope.user.id});
       _.each(dashprofiles, function(profile){
-        var q = _.find(data.questions, function(question){
+        var q = _.find(data.question, function(question){
           return question.profile_id === profile.id;
         });
         profile.name = q.name;

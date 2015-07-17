@@ -19,7 +19,8 @@
 
     var _profileSuccess = function (data) {
       console.log(data.profiles);
-      $cookies.put('currentprofileID', data.profiles.profile_id);
+      console.log(data.data.profiles);
+      //$cookies.put('currentprofileID', data.data.profiles.profile_id);
       console.log(data.profiles.profile_id);
     };
 
