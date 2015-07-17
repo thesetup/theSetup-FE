@@ -18,14 +18,11 @@
     };
 
     var _profileSuccess = function (data) {
-      console.log(data.profiles);
-      console.log(data.data.profiles);
-      //$cookies.put('currentprofileID', data.data.profiles.profile_id);
-      console.log(data.profiles.profile_id);
+      $cookies.put('currentprofileUID', data.profiles.profilee_id);
     };
 
     var _imageSuccess = function () {
-      $cookies.remove('currentprofileID');
+      $cookies.remove('currentprofileUID');
     };
 
     this.profileCreation = function (profile) {
@@ -62,13 +59,14 @@
 
 
     this.imageUpload = function () {
-      var pid = $cookies.get('currentprofileID');
-      console.log(pid);
+      var uid = $cookies.get('currentprofileUID');
+      console.log(uid);
       var mainPic = document.getElementById('mainPhoto').files[0];
 
 
       var headers = {
-        'Content-Type' : undefined
+        'Content-Type' : undefined,
+        'Access-Token' : $cookies.get('access_token')
       };
       var formData = new FormData();
       formData.append('file[image]', mainPic);
@@ -76,12 +74,13 @@
       console.log(formData);
 
       $http({
-        method: 'POST',
-        url: API.URL + '/profiles/' + pid + '/images',
+        method: 'PATCH',
+        url: API.URL + '/user/' + uid + '/image',
         data: formData,
         headers: headers
 
       }).success(function (data) {
+        console.log('success!');
         _imageSuccess(data);
       });
     };

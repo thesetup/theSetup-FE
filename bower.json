@@ -25,7 +25,8 @@
     "Cookies": "~1.2.1",
     "angular-cookies": "~1.4.1",
     "angular-material": "~0.10.0",
-    "font-awesome": "~4.3.0"
+    "font-awesome": "~4.3.0",
+    "video.js": "~4.12.11"
   },
   "devDependencies": {
     "mocha": "~2.2.5",

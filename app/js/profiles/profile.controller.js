@@ -34,10 +34,6 @@
       UserService.logout();
     };
 
-    $scope.uploadVideo = function (profile) {
-      ProfileService.submitVideo(profile);
-    };
-
 
   }]);
 
