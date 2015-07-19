@@ -18,11 +18,11 @@
     };
 
     var _profileSuccess = function (data) {
-      $cookies.put('currentprofileUID', data.profiles.profilee_id);
+      $cookies.put('currentprofileID', data.profiles.id);
     };
 
     var _imageSuccess = function () {
-      $cookies.remove('currentprofileUID');
+      $cookies.remove('currentprofileID');
     };
 
     this.profileCreation = function (profile) {
@@ -59,8 +59,8 @@
 
 
     this.imageUpload = function () {
-      var uid = $cookies.get('currentprofileUID');
-      console.log(uid);
+      var pid = $cookies.get('currentprofileID');
+      console.log(pid);
       var mainPic = document.getElementById('mainPhoto').files[0];
 
 
@@ -74,8 +74,8 @@
       console.log(formData);
 
       $http({
-        method: 'PATCH',
-        url: API.URL + '/user/' + uid + '/image',
+        method: 'PUT',
+        url: API.URL + '/profiles/' + pid + '/avatar',
         data: formData,
         headers: headers
 
