@@ -126,17 +126,28 @@ button:before {
     content: '\f004';
     left: -28px; }
 
-.searchDiv ul select {
-  width: 150px;
-  display: inline-block;
-  margin-right: 50px; }
-
-.searchDiv h2 {
-  color: RGBA(21, 141, 162, 1); }
-
-.searchDiv ul li {
-  display: inline-block;
-  margin-right: 100px; }
+.searchDiv {
+  margin-top: 50px; }
+  .searchDiv ul select {
+    width: 150px;
+    display: inline-block;
+    margin-right: 50px; }
+  .searchDiv h2 {
+    color: RGBA(21, 141, 162, 1); }
+    .searchDiv h2 img {
+      margin-left: 10px;
+      margin-right: 10px;
+      object-fit: cover; }
+  .searchDiv ul li {
+    display: inline-block;
+    margin-right: 100px; }
+  .searchDiv .row {
+    background-color: RGBA(189, 189, 189, 0.4);
+    border-radius: 5px;
+    padding-left: 80px;
+    padding-top: 5px;
+    padding-right: 80px;
+    padding-bottom: 25px; }
 
 .searchResults ul li {
   background-color: white;

@@ -175,6 +175,8 @@ button:before {
 
 .searchDiv {
 
+  margin-top: 50px;
+
   ul select {
     width: 150px;
     display: inline-block;
@@ -183,11 +185,25 @@ button:before {
 
   h2 {
     color: $indigo;
+     img {
+      margin-left: 10px;
+      margin-right: 10px;
+      object-fit: cover;
+     }
   }
 
   ul li {
     display: inline-block;
     margin-right: 100px;
+  }
+
+  .row {
+    background-color: RGBA(189, 189, 189, 0.4);
+    border-radius: 5px;
+    padding-left: 80px;
+    padding-top: 5px;
+    padding-right: 80px;
+    padding-bottom: 25px;
   }
 }
 
