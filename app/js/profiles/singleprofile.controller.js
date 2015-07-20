@@ -40,15 +40,30 @@
     ProfileService.getSingleProfile($stateParams.id).then(function (data) {
         var questions = data.data.question;
         $scope.questions = questions;
+        var avatar = data.data.avatar_url;
+        $scope.avatar = avatar;
 
         var createdBy = data.data.profiles;
         var videos = data.data.videos;
-        console.log(videos);
         _.each(videos, function(video) {
           console.log(video);
-          var prof_video = video.video_url;
+          if (video.video_type == "main_video") {
+            var prof_video = video.video_url;
+            $scope.prof_video = $sce.trustAsResourceUrl(prof_video);
+          }
+          if (video.video_type == "optional_video_1") {
+            var opt1_video = video.video_url;
+            $scope.opt1_video = $sce.trustAsResourceUrl(opt1_video);
+          }
+          if (video.video_type == "optional_video_2") {
+            var opt2_video = video.video_url;
+            $scope.opt2_video = $sce.trustAsResourceUrl(opt2_video);
+          }
+          if (video.video_type == "optional_video_3") {
+            var opt3_video = video.video_url;
+            $scope.opt3_video = $sce.trustAsResourceUrl(opt3_video);
+          }
           var thumb_video = video.thumbnail_url;
-          $scope.prof_video = $sce.trustAsResourceUrl(prof_video);
         });
 
     ProfileService.getCreator(createdBy.profiler_id).then(function(data) {

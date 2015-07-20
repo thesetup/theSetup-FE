@@ -19,7 +19,7 @@
 
 <div class="row">
 <div class="profileTop">
- <img src="http://lorempixel.com/300/300/people" width="300" height="auto"/>
+ <img src="{{ avatar }}" width="auto" height="350"/>
 
 
 
@@ -39,22 +39,23 @@
  <div class="singleProfileVideoDiv">
  <div>
 
- <!-- <video width="300" height="300" src="{{ prof_video }}" controls></video> -->
-   <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264"
+ <video width="300" height="300" src="{{ prof_video }}" controls></video>
+<!--    <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264"
       poster="{{ thumb_video }}"
       data-setup="{}">
     <source src="{{ prof_video }}" type='video/mp4' />
   </video>
   <p>{{ prof_video }}</p>
- </div>
+ --> </div>
  </div>
  </div>
 
 <div class="row">
  <div class="optionalVidsDiv">
- <div class="video"><span>Video goes here!</span></div>
- <div class="video"><span>Video goes here!</span></div>
- <div class="video"><span>Video goes here!</span></div>
+ <video width="200" height="300" src="{{ opt1_video }}" controls></video>
+ <video width="200" height="300" src="{{ opt2_video }}" controls></video>
+ <video width="200" height="300" src="{{ opt3_video }}" controls></video>
+
 
  </div>
 </div>
