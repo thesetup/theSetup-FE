@@ -17,7 +17,7 @@
 
 
 
-<form ng-submit="search()">
+<form ng-submit="search(search)">
 <ul class="searchList">
 
   <label>Minimum Age</label>
@@ -58,7 +58,7 @@
 <div class="searchResults">
 
 <ul>
-<li ng-repeat="s in searchdata.question">
+<li ng-repeat="s in searchdata.questions">
 <a href="/#/single/{{ s.profile_id }}">
 
 <div class="colorTopMale"></div>

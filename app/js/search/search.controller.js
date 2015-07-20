@@ -15,7 +15,8 @@
         console.log(searchdata);
         $scope.searchdata = searchdata;
         var currYear = new Date().getFullYear();
-        _.each(searchdata.question, function(bar) {
+        console.log(searchdata.questions);
+        _.each(searchdata.questions, function(bar) {
             var currAge = (currYear - bar.birthyear);
             bar.age = currAge;
         });
