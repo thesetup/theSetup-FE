@@ -37,24 +37,15 @@
 
 <div class="row">
  <div class="singleProfileVideoDiv">
- <div>
-
- <video width="300" height="300" src="{{ prof_video }}" controls></video>
-<!--    <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264"
-      poster="{{ thumb_video }}"
-      data-setup="{}">
-    <source src="{{ prof_video }}" type='video/mp4' />
-  </video>
-  <p>{{ prof_video }}</p>
- --> </div>
+ <div><video class="mainVideo" src="{{ prof_video }}" controls></video> {{ main_caption }}</div>
  </div>
  </div>
 
 <div class="row">
  <div class="optionalVidsDiv">
- <video width="200" height="300" src="{{ opt1_video }}" controls></video>
- <video width="200" height="300" src="{{ opt2_video }}" controls></video>
- <video width="200" height="300" src="{{ opt3_video }}" controls></video>
+ <div class="videoDiv"><video  src="{{ opt1_video }}" controls></video><span>"{{ opt1_caption }}"</span></div>
+ <div class="videoDiv"><video  src="{{ opt2_video }}" controls></video><span>"{{ opt2_caption }}"</span></div>
+ <div class="videoDiv"><video  src="{{ opt3_video }}" controls></video><span>"{{ opt3_caption }}"</span></div>
 
 
  </div>

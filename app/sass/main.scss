@@ -364,27 +364,33 @@ button:before {
     top: -60px;
   }
 
-  .video-container {
-    width: 60%;
-    margin: 0 auto;
-  }
 
-  .optionalVidsDiv {
 
-    .video {
-      @include span-columns(3);
-      width: 30%;
 
-      iframe {
-        height: 200px;
 
+  .videoDiv {
+
+      @include span-columns(4);
+      overflow: hidden;
+
+      video {
+
+        width: 100%;
+      }
+
+      span {
+
+        color: $indigo;
+        font-size: 1.5em;
       }
     }
+
+  .mainVideo {
+    margin-left: 35%;
   }
 
-  .optionalPicsDiv ul li {
-    display: inline-block;
-  }
+
+
 
   .row {
     border: 2px solid $lightGray;

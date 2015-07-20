@@ -253,21 +253,21 @@ button:before {
     font-size: 1em;
     right: 125px;
     top: -60px; }
-  .singleProfileDiv .video-container {
-    width: 60%;
-    margin: 0 auto; }
-  .singleProfileDiv .optionalVidsDiv .video {
+  .singleProfileDiv .videoDiv {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%;
-    width: 30%; }
-    .singleProfileDiv .optionalVidsDiv .video:last-child {
+    width: 31.76157%;
+    overflow: hidden; }
+    .singleProfileDiv .videoDiv:last-child {
       margin-right: 0; }
-    .singleProfileDiv .optionalVidsDiv .video iframe {
-      height: 200px; }
-  .singleProfileDiv .optionalPicsDiv ul li {
-    display: inline-block; }
+    .singleProfileDiv .videoDiv video {
+      width: 100%; }
+    .singleProfileDiv .videoDiv span {
+      color: RGBA(21, 141, 162, 1);
+      font-size: 1.5em; }
+  .singleProfileDiv .mainVideo {
+    margin-left: 35%; }
   .singleProfileDiv .row {
     border: 2px solid #bdbdbd;
     padding: 25px;
