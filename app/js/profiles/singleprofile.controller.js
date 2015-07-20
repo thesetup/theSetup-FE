@@ -45,8 +45,9 @@
         var videos = data.data.videos;
         console.log(videos);
         _.each(videos, function(video) {
-          console.log(video.video_url);
+          console.log(video);
           var prof_video = video.video_url;
+          var thumb_video = video.thumbnail_url;
           $scope.prof_video = $sce.trustAsResourceUrl(prof_video);
         });
 

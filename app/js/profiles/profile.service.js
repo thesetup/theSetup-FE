@@ -69,7 +69,7 @@
         'Access-Token' : $cookies.get('access_token')
       };
       var formData = new FormData();
-      formData.append('file[image]', mainPic);
+      formData.append('avatar', mainPic);
 
       console.log(formData);
 
