@@ -38,7 +38,7 @@
     };
 
     ProfileService.getSingleProfile($stateParams.id).then(function (data) {
-
+        console.log(data.data);
         var questions = data.data.question;
         $scope.questions = questions;
         var avatar = data.data.avatar_url;

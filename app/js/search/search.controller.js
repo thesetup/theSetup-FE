@@ -7,15 +7,18 @@
   .controller('SearchController', ['API', '$rootScope', '$http', '$state', '$scope', 'SearchService', 'UserService', 'ProfileService', function (API, $rootScope, $http, $state, $scope, SearchService, UserService, ProfileService) {
 
     $scope.searchdata = [];
+    $scope.dataHasLoaded = false;
 
-    $scope.search = function() {
-      SearchService.goSearch()
+    $scope.search = function(search, location, orient) {
+      console.log(search);
+      SearchService.goSearch(search, location, orient)
       .then(function (data) {
+        console.log(data);
         var searchdata = data.data;
         console.log(searchdata);
         $scope.searchdata = searchdata;
+        $scope.dataHasLoaded = true;
         var currYear = new Date().getFullYear();
-        console.log(searchdata.questions);
         _.each(searchdata.questions, function(bar) {
             var currAge = (currYear - bar.birthyear);
             bar.age = currAge;

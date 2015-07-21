@@ -17,7 +17,7 @@
 
 
 
-<form ng-submit="search(search)">
+<form ng-submit="search(search, location, orient)">
 <ul class="searchList">
 
   <label>Minimum Age</label>
@@ -32,21 +32,21 @@
     <option ng-repeat="a in range(18,85)" value="{{ a }}">{{ a }}</option>
   </select>
 
-  <input type="text" placeholder="Location">
+  <input type="text" ng-model="location.keywords" placeholder="Location">
 
   <li>
   <h6>Gender</h6>
-  <input type="radio" name="gender" class="with-gap" id="search-male" value="male" ng-model="search.gender">
+  <input type="radio" name="gender" class="with-gap" id="search-male" value="male" ng-model="search.keywords">
   <label for="search-male">Male</label>
-  <input type="radio" name="gender" class="with-gap" id="search-female" value="female" ng-model="search.gender">
+  <input type="radio" name="gender" class="with-gap" id="search-female" value="female" ng-model="search.keywords">
   <label for="search-female">Female</label>
   </li>
 
   <li>
   <h6>Orientation</h6>
-  <input type="radio" name="orientation" class="with-gap" id="search-straight" ng-model="search.orientation">
+  <input type="radio" name="orientation" class="with-gap" id="search-straight" value="straight" ng-model="orient.keywords">
   <label for="search-straight">Straight</label>
-  <input type="radio" name="orientation" class="with-gap" id="search-gay" ng-model="search.orientation">
+  <input type="radio" name="orientation" class="with-gap" id="search-gay" value="gay" ng-model="orient.keywords">
   <label for="search-straight">Gay</label>
   </li>
 
@@ -57,21 +57,8 @@
 
 <div class="searchResults">
 
-<ul>
-<li ng-repeat="s in searchdata.questions">
-<a href="/#/single/{{ s.profile_id }}">
-
-<div class="colorTopMale"></div>
- <span class="searchResultImage"><img src="http://lorempixel.com/100/100/people" style="border-radius:50%"></span>
- <span>Name: {{ s.name }}</span>
- <span>Gender: {{ s.gender}}</span>
- <span>Location: {{ s.location }}</span>
- <span>Age: {{ s.age }}</span>
- <span>Orientation: {{ s.orientation }}</span>
- <span>Occupation: {{ s.occupation }}</span>
-
-</a>
-</li>
+<ul ng-if="dataHasLoaded">
+  <div search-results searchdata="searchdata" ng-repeat="profile in searchdata.profiles" user="profile"></div>
 </ul>
 
 </div>

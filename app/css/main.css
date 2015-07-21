@@ -179,8 +179,10 @@ button:before {
   border-radius: 5px;
   margin-bottom: 5px; }
 
-.searchResultImage {
-  margin-left: 30%; }
+.searchResultImage img {
+  margin-left: 30%;
+  max-width: 100px;
+  max-height: 100px; }
 
 .createDiv {
   color: #727D8C; }
