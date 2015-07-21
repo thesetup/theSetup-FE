@@ -43,6 +43,11 @@
         $scope.questions = questions;
         var avatar = data.data.avatar_url;
         $scope.avatar = avatar;
+        console.log(avatar);
+
+        // if (avatar == null) {
+        //   //$scope.avatar = data.
+        // }
 
         var createdBy = data.data.profiles;
         var videos = data.data.videos;

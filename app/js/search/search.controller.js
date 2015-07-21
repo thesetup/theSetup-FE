@@ -9,9 +9,11 @@
     $scope.searchdata = [];
     $scope.dataHasLoaded = false;
 
-    $scope.search = function(search, location, orient) {
-      console.log(search);
-      SearchService.goSearch(search, location, orient)
+    $scope.search = function(gender, location, orient) {
+      console.log(gender);
+      console.log(location);
+      console.log(orient);
+      SearchService.goSearch(gender, location, orient)
       .then(function (data) {
         console.log(data);
         var searchdata = data.data;
@@ -24,7 +26,7 @@
             bar.age = currAge;
         });
 
-      });
+     });
     };
 
     $scope.range = function(min, max, step){

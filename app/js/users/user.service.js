@@ -22,6 +22,7 @@
 
 
     var _successLog = function (data) {
+      console.log(data);
       $cookies.put('access_token', data.access_token);
       $cookies.putObject('currentUser', data);
       _updateConfig(data);

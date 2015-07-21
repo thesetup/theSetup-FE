@@ -17,7 +17,7 @@
 
 
 
-<form ng-submit="search(search, location, orient)">
+<form ng-submit="search(gender, location, orient)">
 <ul class="searchList">
 
   <label>Minimum Age</label>
@@ -36,9 +36,9 @@
 
   <li>
   <h6>Gender</h6>
-  <input type="radio" name="gender" class="with-gap" id="search-male" value="male" ng-model="search.keywords">
+  <input type="radio" name="gender" class="with-gap" id="search-male" value="male" ng-model="gender.keywords">
   <label for="search-male">Male</label>
-  <input type="radio" name="gender" class="with-gap" id="search-female" value="female" ng-model="search.keywords">
+  <input type="radio" name="gender" class="with-gap" id="search-female" value="female" ng-model="gender.keywords">
   <label for="search-female">Female</label>
   </li>
 
@@ -47,7 +47,7 @@
   <input type="radio" name="orientation" class="with-gap" id="search-straight" value="straight" ng-model="orient.keywords">
   <label for="search-straight">Straight</label>
   <input type="radio" name="orientation" class="with-gap" id="search-gay" value="gay" ng-model="orient.keywords">
-  <label for="search-straight">Gay</label>
+  <label for="search-gay">Gay</label>
   </li>
 
 </ul>
