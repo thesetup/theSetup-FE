@@ -10,10 +10,22 @@
     $scope.dataHasLoaded = false;
 
     $scope.search = function(gender, location, orient) {
-      console.log(gender);
-      console.log(location);
-      console.log(orient);
-      SearchService.goSearch(gender, location, orient)
+      console.log(gender, location, orient);
+        var params = [];
+      if (gender !== undefined) {
+        var param1 = gender.keywords;
+        params.push(param1);
+      }
+      if (location !== undefined) {
+        var param2 = location.keywords;
+        params.push(param2);
+      }
+      if (orient !== undefined) {
+        var param3 = orient.keywords;
+        params.push(param3);
+      }
+      console.log(params);
+      SearchService.goSearch(params)
       .then(function (data) {
         console.log(data);
         var searchdata = data.data;

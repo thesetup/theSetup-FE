@@ -6,8 +6,9 @@
 
   .service('SearchService', ['API', '$cookies', '$rootScope', '$state', '$http', function (API, $cookies, $rootScope, $state, $http) {
 
-      this.goSearch = function (gender, location, orient) {
-      var p = {keywords: gender.keywords + ',' + location.keywords + ',' + orient.keywords};
+    this.goSearch = function (params) {
+
+      var p = {keywords: params};
       return $http({
         method: 'GET',
         url: API.URL + '/questions/search',
