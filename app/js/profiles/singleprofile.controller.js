@@ -45,9 +45,9 @@
         $scope.avatar = avatar;
         console.log(avatar);
 
-        // if (avatar == null) {
-        //   //$scope.avatar = data.
-        // }
+        if (avatar == "/avatars/original/missing.png") {
+          $scope.avatar = data.data.avatar_remote_url;
+        }
 
         var createdBy = data.data.profiles;
         var videos = data.data.videos;
