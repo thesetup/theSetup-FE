@@ -16,6 +16,10 @@
         user: '=user'
       },
       controller: function ($scope) {
+
+        // grabs avatar from profiles array then grabs
+        // questions from questions array for search
+        // results cards
         $scope.avatar = $scope.user.avatar_url;
         if ($scope.avatar == "/avatars/original/missing.png") {
           $scope.avatar = $scope.user.avatar_remote_url;

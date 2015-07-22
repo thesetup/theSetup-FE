@@ -357,7 +357,8 @@ button:before {
 
     img {
       width: 40%;
-      //border: 1px solid $lightGray;
+      height: 350px;
+      object-fit: contain;
       border-radius: 5px;
     }
   }

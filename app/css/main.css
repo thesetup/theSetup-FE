@@ -249,6 +249,8 @@ button:before {
     position: relative; }
     .singleProfileDiv .profileTop img {
       width: 40%;
+      height: 350px;
+      object-fit: contain;
       border-radius: 5px; }
   .singleProfileDiv .profileTop:before {
     content: '\f1d8   apply for date';

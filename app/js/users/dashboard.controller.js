@@ -11,6 +11,9 @@
     $scope.user = $cookies.getObject('currentUser');
     console.log($scope.user.username);
 
+
+    // get all profiles and return profiles the user created
+    // for their dashboard
     SearchService.searching().success( function (data) {
       var dashprofiles = _.where(data.profiles, {profiler_id: $scope.user.id});
       _.each(dashprofiles, function(profile){

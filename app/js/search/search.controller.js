@@ -9,8 +9,11 @@
     $scope.searchdata = [];
     $scope.dataHasLoaded = false;
 
+
+    // grabs the params that were sent for search, only sends the params
+    // that are not undefined. Recieves data back and converts birthyear
+    // to age before rendering on page
     $scope.search = function(gender, location, orient) {
-      console.log(gender, location, orient);
         var params = [];
       if (gender !== undefined) {
         var param1 = gender.keywords;
@@ -24,12 +27,9 @@
         var param3 = orient.keywords;
         params.push(param3);
       }
-      console.log(params);
       SearchService.goSearch(params)
       .then(function (data) {
-        console.log(data);
         var searchdata = data.data;
-        console.log(searchdata);
         $scope.searchdata = searchdata;
         $scope.dataHasLoaded = true;
         var currYear = new Date().getFullYear();
@@ -41,6 +41,7 @@
      });
     };
 
+    // age range I want for min age and max age on search criteria
     $scope.range = function(min, max, step){
     step = step || 1;
     var input = [];
