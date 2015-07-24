@@ -8,7 +8,8 @@
 
     // GET request for search results
     this.goSearch = function (params) {
-      var p = {keywords: params};
+
+      var p = {keywords: params.toString()};
       return $http({
         method: 'GET',
         url: API.URL + '/questions/search',

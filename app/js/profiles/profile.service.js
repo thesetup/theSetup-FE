@@ -18,6 +18,7 @@
     };
 
     var _profileSuccess = function (data) {
+      console.log(data);
       $cookies.put('currentprofileID', data.profiles.id);
     };
 

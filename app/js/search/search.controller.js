@@ -14,6 +14,9 @@
     // that are not undefined. Recieves data back and converts birthyear
     // to age before rendering on page
     $scope.search = function(gender, location, orient) {
+      console.log(gender);
+      console.log(location);
+      console.log(orient);
         var params = [];
       if (gender !== undefined) {
         var param1 = gender.keywords;
@@ -29,6 +32,7 @@
       }
       SearchService.goSearch(params)
       .then(function (data) {
+        console.log(data);
         var searchdata = data.data;
         $scope.searchdata = searchdata;
         $scope.dataHasLoaded = true;
