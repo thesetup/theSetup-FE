@@ -7,7 +7,7 @@
   .controller('PublicController', ['$scope', 'UserService', function ($scope, UserService) {
 
     $(document).ready(function () {
-     $('.slider').slider();
+     $('.slider').slider({height: 600});
    });
 
   }]);
